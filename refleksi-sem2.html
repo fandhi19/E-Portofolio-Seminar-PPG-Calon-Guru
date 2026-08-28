@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refleksi Semester 2 | E-Portfolio Seminar Pendidikan</title>
+  <meta name="description" content="Refleksi pembelajaran Semester 2 Program PPG Calon Guru - Ilyas Fandhi Anggara." />
+
+  <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- BACKGROUND GLOW MESH & CANVAS -->
+  <div class="bg-wrapper">
+    <canvas id="bgCanvas" class="bg-canvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="glow-orb-container orb-container-1">
+      <div class="glow-orb orb-1"></div>
+    </div>
+    <div class="glow-orb-container orb-container-2">
+      <div class="glow-orb orb-2"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
+        <span>PORTFOLIO</span>
+      </a>
+
+      <nav class="nav-center">
+        <a href="identitas.html">IDENTITAS</a>
+        <a href="refleksi-sem1.html">SEMESTER 1</a>
+        <a href="refleksi-sem2.html" class="active">SEMESTER 2</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+          <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+          <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+          <span class="theme-label" id="themeLabel">LIGHT</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="identity-hero" id="home">
+      <div class="container identity-hero-grid">
+        <div class="reveal">
+          <div class="identity-kicker">[ REFLEKSI PEMBELAJARAN / SEMESTER 02 ]</div>
+          <h1>
+            ADVANCED<br />
+            <span>PRACTICE.</span><br />
+            <span class="outline">WHAT EVOLVED?</span>
+          </h1>
+          <p>
+            Ruang refleksi pembelajaran Semester 2 yang mendokumentasikan pendalaman kompetensi pedagogik, kepemimpinan sosial-emosional, keprofesian berkelanjutan, serta pengalaman praktik mandiri di lingkungan sekolah nyata.
+          </p>
+        </div>
+
+        <div class="identity-visual reveal">
+          <div class="visual-word">GROWTH</div>
+          <div class="hero-code-card">
+            <div class="label">Semester 02 / Advanced Growth</div>
+            <h3>Dari pemahaman, menjadi kepemimpinan aksi.</h3>
+            <p>Pengembangan tingkat lanjut untuk memperkuat kemandirian mendidik, empati emosional, dan kolaborasi kepemimpinan di ruang belajar masa depan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="motion-marquee reveal" aria-hidden="true">
+      <div class="motion-track">
+        <span><b>01</b> EMOTIONAL INTELLIGENCE</span>
+        <span>LEADERSHIP <b>✦</b> CONTINUOUS GROWTH <b>✦</b> MANDIRI</span>
+        <span><b>02</b> SEMESTER 02 REFLECTION</span>
+        <span>DEEP LEARNING <b>✦</b> ACTION RESEARCH <b>✦</b> IMPACT</span>
+        <span><b>03</b> FUTURE EDUCATOR</span>
+        <span>COMPASSIONATE <b>✦</b> PROFESSIONAL <b>✦</b> ADAPTIVE</span>
+        <span><b>01</b> EMOTIONAL INTELLIGENCE</span>
+        <span>LEADERSHIP <b>✦</b> CONTINUOUS GROWTH <b>✦</b> MANDIRI</span>
+      </div>
+    </div>
+
+    <!-- COURSE SELECTOR & PANELS -->
+    <section class="content-section" id="mata-kuliah">
+      <div class="container">
+        <div class="section-top reveal">
+          <div>
+            <div class="section-kicker">01 // COURSE REFLECTION</div>
+            <h2 class="section-title">CHOOSE<br />YOUR SUBJECT.</h2>
+          </div>
+          <p class="section-description">Pilih mata kuliah Semester 2 untuk menampilkan hasil refleksi mendalam dan dokumen artefak pendukung.</p>
+        </div>
+
+        <div class="course-selector reveal">
+          <div class="selector-top">
+            <div class="selector-label">Semester 02 / Mata Kuliah</div>
+            <div class="selector-hint">Klik mata kuliah untuk menjelajahi refleksi</div>
+          </div>
+          <div class="course-buttons">
+            <button class="course-btn active" data-course="sosial-emosional">
+              <span>01</span>
+              <strong>Pembelajaran Sosial Emosional</strong>
+            </button>
+            <button class="course-btn" data-course="mendalam-lanjut">
+              <span>02</span>
+              <strong>Pembelajaran Mendalam & Asesmen Lanjut</strong>
+            </button>
+            <button class="course-btn" data-course="projek-kepemimpinan">
+              <span>03</span>
+              <strong>Projek Kepemimpinan</strong>
+            </button>
+            <button class="course-btn" data-course="pkb">
+              <span>04</span>
+              <strong>Pengembangan Keprofesian Berkelanjutan</strong>
+            </button>
+            <button class="course-btn" data-course="ppl-mandiri">
+              <span>05</span>
+              <strong>Praktik Pengalaman Lapangan Mandiri</strong>
+            </button>
+          </div>
+        </div>
+
+        <!-- ========== PANEL 01: SOSIAL EMOSIONAL ========== -->
+        <article class="course-panel active" id="sosial-emosional">
+          <div class="course-header">
+            <div>
+              <div class="course-code">SEMESTER 02 / COURSE 01</div>
+              <h3 class="course-title">Pembelajaran<br />Sosial Emosional (PSE)</h3>
+            </div>
+            <div class="course-status">Status: <span>Reflected</span></div>
+          </div>
+
+          <div class="reflection-flow">
+            <!-- CONNECTION -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">01</div>
+                <div>
+                  <div class="reflection-label">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</div>
+                  <div class="reflection-question">CONNECTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Mata kuliah Pembelajaran Sosial Emosional (PSE) menyadarkan saya bahwa pembelajaran yang efektif tidak hanya bergantung pada kecerdasan akademis atau penyampaian materi teknis, melainkan juga pada kemampuan mengelola emosi, membangun relasi positif, dan mengambil keputusan yang bertanggung jawab.
+                </p>
+                <p>
+                  Sebagai calon guru Informatika, PSE sangat krusial untuk menciptakan iklim kelas yang aman (psychological safety), di mana peserta didik tidak takut mencoba, berdiskusi, dan berkolaborasi saat menghadapi tantangan pemecahan masalah algoritma atau proyek digital.
+                </p>
+              </div>
+            </div>
+
+            <!-- CHALLENGE -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">02</div>
+                <div>
+                  <div class="reflection-label">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</div>
+                  <div class="reflection-question">CHALLENGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Sebelumnya, saya cenderung menganggap bahwa manajemen kelas berfokus pada ketertiban dan kepatuhan aturan secara disipliner. Namun melalui PSE, saya belajar bahwa perilaku peserta didik berakar dari kondisi emosional dan kebutuhan sosial yang belum terpenuhi.
+                </p>
+                <p>
+                  Tantangan yang saya hadapi adalah bagaimana secara sadar mengintegrasikan 5 kompetensi sosial-emosional (CASEL: Self-awareness, Self-management, Social awareness, Relationship skills, Responsible decision-making) ke dalam rencana pembelajaran tanpa mengorbankan alokasi capaian materi kurikulum.
+                </p>
+              </div>
+            </div>
+
+            <!-- CONCEPT -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">03</div>
+                <div>
+                  <div class="reflection-label">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</div>
+                  <div class="reflection-question">CONCEPT</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <ul>
+                  <li>
+                    <strong>Kesadaran Penuh (Mindfulness) & Teknik STOP:</strong> Penerapan teknik STOP (Stop, Take a breath, Observe, Proceed) untuk mengembalikan fokus dan ketenangan emosional peserta didik sebelum atau saat pembelajaran berlangsung.
+                  </li>
+                  <li>
+                    <strong>Integrasi 5 Kompetensi CASEL:</strong> Merancang skenario pembelajaran yang melatih empati (kesadaran sosial), kerja sama kelompok (keterampilan berelasi), serta refleksi etis (pengambilan keputusan yang bertanggung jawab).
+                  </li>
+                  <li>
+                    <strong>Lingkungan Belajar yang Welcoming & Supportive:</strong> Menciptakan ruang kelas di mana setiap anak merasa didengar, dihargai, dan memiliki rasa memiliki (sense of belonging).
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CHANGE -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">04</div>
+                <div>
+                  <div class="reflection-label">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</div>
+                  <div class="reflection-question">CHANGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Saya akan rutin menyisipkan *emotional check-in* sederhana di awal pertemuan dan *meaningful reflection* di akhir kelas. Saya juga akan mengedepankan pendekatan restoratif ketika menyelesaikan konflik antar peserta didik, bukan sekadar memberikan sanksi sepihak.
+                </p>
+              </div>
+            </div>
+
+            <!-- ARTIFACT -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">05</div>
+                <div>
+                  <div class="reflection-label">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi ini?</div>
+                  <div class="reflection-question">ARTIFACT / EVIDENCE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Artefak yang saya jadikan bukti pendukung adalah modul ajar terintegrasi kompetensi PSE (teknik STOP & active listening) serta lembar refleksi diri berbasis CASEL Framework.
+                </p>
+              </div>
+            </div>
+
+            <!-- WHY ARTIFACT -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">06</div>
+                <div>
+                  <div class="reflection-label">Mengapa artefak tersebut saya pilih?</div>
+                  <div class="reflection-question">WHY THIS ARTIFACT?</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Artefak tersebut membuktikan pergeseran konkret dalam perencanaan mengajar saya: dari yang sebelumnya murni teknis menjadi pembelajaran humanis yang memperhatikan kesiapan mental dan emosional peserta didik.
+                </p>
+              </div>
+            </div>
+
+            <!-- SUPPORTING PART -->
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">07</div>
+                <div>
+                  <div class="reflection-label">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</div>
+                  <div class="reflection-question">SUPPORTING PART</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Bagian pada sintaks kegiatan inti modul ajar di mana terdapat panduan refleksi kelompok terstruktur dan pembiasaan apresiasi antar teman sebaya (*peer praise*).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOCUMENT SUPPORT -->
+          <div style="margin-top: 60px">
+            <div class="section-kicker">Supporting Documents</div>
+            <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-top: 10px">ARTEFAK PEMBELAJARAN</h3>
+            <div class="artifact-grid">
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 01 / Modul PSE</div>
+                <h4>Rancangan Modul Integrasi Pembelajaran Sosial Emosional</h4>
+                <p>Dokumentasi integrasi kompetensi sosial emosional ke dalam skenario pembelajaran aktif di kelas Informatika.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PMA 1.pdf', 'Modul Ajar Integrasi PSE')">Lihat Dokumen →</button>
+              </article>
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 02 / Refleksi</div>
+                <h4>Lembar Analisis & Refleksi CASEL Framework</h4>
+                <p>Hasil evaluasi diri dan observasi respons peserta didik terhadap penerapan teknik kesadaran penuh di kelas.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PMA 2.pdf', 'Analisis Refleksi PSE')">Lihat Dokumen →</button>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== PANEL 02: PEMBELAJARAN MENDALAM & ASESMEN LANJUT ========== -->
+        <article class="course-panel" id="mendalam-lanjut">
+          <div class="course-header">
+            <div>
+              <div class="course-code">SEMESTER 02 / COURSE 02</div>
+              <h3 class="course-title">Pembelajaran Mendalam<br />& Asesmen Lanjut</h3>
+            </div>
+            <div class="course-status">Status: <span>Reflected</span></div>
+          </div>
+
+          <div class="reflection-flow">
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">01</div>
+                <div>
+                  <div class="reflection-label">Keterkaitan materi dengan peran calon guru</div>
+                  <div class="reflection-question">CONNECTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Mata kuliah ini memperdalam kemampuan saya dalam menyusun asesmen diagnostik, formatif autentik, dan sumatif bermakna yang selaras dengan prinsip *Understanding by Design* (UbD). Saya belajar bagaimana merancang tujuan pembelajaran berdasarkan transfer pemahaman jangka panjang, bukan sekadar hafalan fakta.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">02</div>
+                <div>
+                  <div class="reflection-label">Perbedaan materi dengan praktik sebelumnya</div>
+                  <div class="reflection-question">CHALLENGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Sebelumnya asesmen sering kali dianggap sebagai instrumen pemberian nilai akhir (*assessment of learning*). Melalui materi ini, fokus utama bergeser menjadi *assessment as learning* (evaluasi diri peserta didik) dan *assessment for learning* (umpan balik konstruktif selama proses berlangsung).
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">03</div>
+                <div>
+                  <div class="reflection-label">Konsep utama yang dipelajari</div>
+                  <div class="reflection-question">CONCEPT</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <ul>
+                  <li><strong>Backward Design:</strong> Menentukan bukti asesmen terlebih dahulu sebelum merancang aktivitas pembelajaran.</li>
+                  <li><strong>Rubrik Asesmen Autentik:</strong> Penyusunan rubrik performa berbasis kriteria holistik dan analitik yang transparan bagi murid.</li>
+                  <li><strong>Differentiated Assessment:</strong> Memberikan opsi produk akhir yang beragam sesuai dengan minat dan profil belajar peserta didik.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">04</div>
+                <div>
+                  <div class="reflection-label">Perubahan rencana aksi</div>
+                  <div class="reflection-question">CHANGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Mengintegrasikan rubrik penilaian diri (*self-assessment*) dan penilaian teman sejawat (*peer assessment*) pada setiap proyek pembuatan program/aplikasi agar murid lebih kritis terhadap proses belajarnya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <div class="section-kicker">Supporting Documents</div>
+            <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-top: 10px">ARTEFAK PEMBELAJARAN</h3>
+            <div class="artifact-grid">
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 01 / Asesmen</div>
+                <h4>Desain Asesmen Autentik & Rubrik Kinerja</h4>
+                <p>Perancangan instrumen penilaian komprehensif berbasis proyek nyata untuk mata pelajaran Informatika.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PMA 1.pdf', 'Desain Asesmen Autentik')">Lihat Dokumen →</button>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== PANEL 03: PROJEK KEPEMIMPINAN ========== -->
+        <article class="course-panel" id="projek-kepemimpinan">
+          <div class="course-header">
+            <div>
+              <div class="course-code">SEMESTER 02 / COURSE 03</div>
+              <h3 class="course-title">Projek Kepemimpinan</h3>
+            </div>
+            <div class="course-status">Status: <span>Reflected</span></div>
+          </div>
+
+          <div class="reflection-flow">
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">01</div>
+                <div>
+                  <div class="reflection-label">Keterkaitan materi dengan peran calon guru</div>
+                  <div class="reflection-question">CONNECTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Guru adalah pemimpin pembelajaran di komunitasnya (*teacher leadership*). Melalui Projek Kepemimpinan, saya belajar memetakan aset komunitas, menyusun proposal inisiatif perubahan pendidikan, dan mengeksekusi proyek sosial bersama tim lintas disiplin.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">02</div>
+                <div>
+                  <div class="reflection-label">Tantangan & Dinamika Kolaborasi</div>
+                  <div class="reflection-question">CHALLENGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Mengkoordinasikan ide, menyamakan visi antar anggota tim, serta menjalin komunikasi dengan pemangku kepentingan (*stakeholders*) eksternal di lingkungan masyarakat/sekolah mitra menjadi pembelajaran kepemimpinan yang sangat nyata.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">03</div>
+                <div>
+                  <div class="reflection-label">Konsep utama & perubahan diri</div>
+                  <div class="reflection-question">CONCEPT & CHANGE</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <ul>
+                  <li><strong>Asset-Based Community Development (ABCD):</strong> Berfokus pada kekuatan dan potensi aset yang dimiliki, bukan terpaku pada kelemahan atau keterbatasan.</li>
+                  <li><strong>Manajemen Risiko & Monitoring:</strong> Menjalankan evaluasi berkala untuk memastikan dampak positif dan keberlanjutan projek.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <div class="section-kicker">Supporting Documents</div>
+            <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-top: 10px">ARTEFAK PEMBELAJARAN</h3>
+            <div class="artifact-grid">
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 01 / Proposal & Laporan</div>
+                <h4>Laporan Pelaksanaan Projek Kepemimpinan</h4>
+                <p>Dokumentasi perencanaan, pelaksanaan, dokumentasi kegiatan, dan evaluasi dampak inisiatif sosial-pendidikan.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PPDP 1.pdf', 'Laporan Projek Kepemimpinan')">Lihat Dokumen →</button>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== PANEL 04: PKB ========== -->
+        <article class="course-panel" id="pkb">
+          <div class="course-header">
+            <div>
+              <div class="course-code">SEMESTER 02 / COURSE 04</div>
+              <h3 class="course-title">Pengembangan Keprofesian<br />Berkelanjutan (PKB)</h3>
+            </div>
+            <div class="course-status">Status: <span>Reflected</span></div>
+          </div>
+
+          <div class="reflection-flow">
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">01</div>
+                <div>
+                  <div class="reflection-label">Keterkaitan materi dengan peran calon guru</div>
+                  <div class="reflection-question">CONNECTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Mata kuliah ini mempertegas komitmen saya sebagai pembelajar sepanjang hayat (*lifelong learner*). Kelulusan PPG bukanlah garis akhir, melainkan titik awal dalam merawat profesionalisme melalui penelitian tindakan kelas, publikasi karya inovatif, dan keikutsertaan aktif dalam komunitas praktisi guru.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">02</div>
+                <div>
+                  <div class="reflection-label">Rencana Pengembangan Diri</div>
+                  <div class="reflection-question">ACTION PLAN</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Menyusun rencana pengembangan diri 3 tahun ke depan yang mencakup: sertifikasi kompetensi keahlian digital, penulisan artikel ilmiah berbasis praktik pembelajaran, serta kontribusi aktif dalam forum MGMP Informatika.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <div class="section-kicker">Supporting Documents</div>
+            <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-top: 10px">ARTEFAK PEMBELAJARAN</h3>
+            <div class="artifact-grid">
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 01 / Career Plan</div>
+                <h4>Rencana Pengembangan Keprofesian Individu</h4>
+                <p>Peta jalan pengembangan kompetensi pedagogik dan profesional guru secara berkelanjutan.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PPDP 2.pdf', 'Rencana PKB Individu')">Lihat Dokumen →</button>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <!-- ========== PANEL 05: PPL MANDIRI ========== -->
+        <article class="course-panel" id="ppl-mandiri">
+          <div class="course-header">
+            <div>
+              <div class="course-code">SEMESTER 02 / COURSE 05</div>
+              <h3 class="course-title">Praktik Pengalaman Lapangan<br />(PPL Mandiri)</h3>
+            </div>
+            <div class="course-status">Status: <span>Reflected</span></div>
+          </div>
+
+          <div class="reflection-flow">
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">01</div>
+                <div>
+                  <div class="reflection-label">Keterkaitan materi dengan peran calon guru</div>
+                  <div class="reflection-question">CONNECTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  PPL Mandiri adalah laboratorium nyata tempat seluruh teori filosofi, pedagogi, asesmen mendalam, dan sosial emosional diuji serta diimplementasikan secara utuh. Saya memegang tanggung jawab penuh dalam mengelola siklus pembelajaran mulai dari perencanaan, pelaksanaan tatap muka di laboratorium komputer, hingga evaluasi reflektif.
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">02</div>
+                <div>
+                  <div class="reflection-label">Tantangan & Solusi di Lapangan</div>
+                  <div class="reflection-question">CHALLENGE & SOLUTION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Keberagaman kecepatan pemahaman peserta didik terhadap materi pemrograman praktis menjadi tantangan utama. Solusi yang saya terapkan adalah pembelajaran berdiferensiasi melalui tutor sebaya (*peer tutoring*) dan penyediaan modul belajar bertingkat (*scaffolded learning material*).
+                </p>
+              </div>
+            </div>
+
+            <div class="reflection-card reveal">
+              <div class="reflection-top">
+                <div class="reflection-number">03</div>
+                <div>
+                  <div class="reflection-label">Refleksi Kunci & Transformasi Diri</div>
+                  <div class="reflection-question">TRANSFORMATION</div>
+                </div>
+              </div>
+              <div class="reflection-answer">
+                <p>
+                  Saya merasakan tumbuhnya rasa percaya diri, kepekaan pedagogis, serta ketahanan adaptif dalam menghadapi dinamika kelas nyata. Pengalaman ini mengukuhkan jati diri saya sebagai pendidik profesional yang siap mendampingi generasi emas Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 60px">
+            <div class="section-kicker">Supporting Documents</div>
+            <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-top: 10px">ARTEFAK PEMBELAJARAN</h3>
+            <div class="artifact-grid">
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 01 / Praktik PPL</div>
+                <h4>Laporan Komprehensif PPL Mandiri</h4>
+                <p>Dokumentasi pelaksanaan pembelajaran mandiri, perangkat ajar, rekaman video praktik, dan hasil refleksi berkala.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PPLT 1.pdf', 'Laporan PPL Mandiri')">Lihat Dokumen →</button>
+              </article>
+              <article class="artifact-card">
+                <div class="artifact-type">Artefact 02 / Evaluasi</div>
+                <h4>Lembar Umpan Balik Guru Pamong & Dosen</h4>
+                <p>Hasil evaluasi observasi mengajar dan rekomendasi peningkatan kualitas pengajaran di kelas.</p>
+                <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen PPLT 2.pdf', 'Evaluasi PPL Mandiri')">Lihat Dokumen →</button>
+              </article>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- PDF MODAL -->
+  <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfTitle">
+    <div class="pdf-modal-backdrop" onclick="closeDocument()"></div>
+    <div class="pdf-viewer">
+      <div class="pdf-header">
+        <div class="pdf-header-meta">
+          <div class="pdf-label">Learning Artifact / Document Preview</div>
+          <h3 class="pdf-title" id="pdfTitle">Document Preview</h3>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" id="pdfExternal" class="pdf-open">Open New Tab</a>
+          <button type="button" class="pdf-close" id="pdfClose" aria-label="Tutup dokumen">×</button>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <iframe id="pdfFrame" src="" title="PDF Document Viewer" loading="lazy"></iframe>
+        <div class="pdf-fallback" id="pdfFallback">
+          <div class="pdf-fallback-inner">
+            <strong>PDF</strong>
+            <p>Browser tidak menampilkan PDF secara langsung pada mode ini. Gunakan tombol <b>Open New Tab</b> di bagian atas untuk melihat dokumen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container reveal">
+      <div class="footer-title">KEEP<br />LEARNING & GROWING</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+        <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+        <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
+      </div>
+      <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
+    </div>
+  </footer>
+
+  <!-- MASTER APP SCRIPT -->
+  <script src="js/app.js"></script>
+
+  <!-- PAGE SPECIFIC: COURSE TABS & PDF VIEWER -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Course Filter Tabs
+      const courseButtons = document.querySelectorAll(".course-btn");
+      const coursePanels  = document.querySelectorAll(".course-panel");
+      courseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.course;
+          courseButtons.forEach(btn => btn.classList.remove("active"));
+          coursePanels.forEach(panel => panel.classList.remove("active"));
+          button.classList.add("active");
+          const targetPanel = document.getElementById(target);
+          if (targetPanel) {
+            targetPanel.classList.add("active");
+            document.querySelector(".course-selector").scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // PDF Viewer Modal
+      const pdfModal    = document.getElementById("pdfModal");
+      const pdfFrame    = document.getElementById("pdfFrame");
+      const pdfTitle    = document.getElementById("pdfTitle");
+      const pdfExternal = document.getElementById("pdfExternal");
+      const pdfClose    = document.getElementById("pdfClose");
+      const pdfFallback = document.getElementById("pdfFallback");
+      let lastFocusedElement = null;
+
+      window.openDocument = function (file, title) {
+        lastFocusedElement = document.activeElement;
+        pdfTitle.textContent = title || "Document Preview";
+        pdfExternal.href = file;
+        pdfFallback.classList.remove("show");
+        pdfFrame.style.display = "block";
+        pdfFrame.src = file;
+        pdfModal.classList.add("active");
+        pdfModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => pdfClose.focus(), 30);
+      };
+
+      window.closeDocument = function () {
+        pdfModal.classList.remove("active");
+        pdfModal.setAttribute("aria-hidden", "true");
+        pdfFrame.src = "";
+        document.body.style.overflow = "";
+        if (lastFocusedElement) lastFocusedElement.focus();
+      };
+
+      if (pdfClose) pdfClose.addEventListener("click", closeDocument);
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && pdfModal && pdfModal.classList.contains("active")) closeDocument();
+      });
+      if (pdfFrame) {
+        pdfFrame.addEventListener("error", () => {
+          pdfFrame.style.display = "none";
+          pdfFallback.classList.add("show");
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

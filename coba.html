@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refleksi Semester 1 | E-Portfolio Seminar Pendidikan</title>
+    <meta name="description" content="Refleksi pembelajaran Semester 1 Program PPG Calon Guru." />
+
+    <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- BACKGROUND GLOW MESH & CANVAS -->
+    <div class="bg-wrapper">
+      <canvas id="bgCanvas" class="bg-canvas"></canvas>
+      <div class="bg-grid"></div>
+      <div class="glow-orb-container orb-container-1">
+        <div class="glow-orb orb-1"></div>
+      </div>
+      <div class="glow-orb-container orb-container-2">
+        <div class="glow-orb orb-2"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
+          <span>PORTFOLIO</span>
+        </a>
+
+        <nav class="nav-center">
+          <a href="identitas.html">IDENTITAS</a>
+          <a href="refleksi-sem1.html" class="active">SEMESTER 1</a>
+          <a href="refleksi-sem2.html">SEMESTER 2</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+            <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+            <span class="theme-label" id="themeLabel">LIGHT</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="identity-hero" id="home">
+        <div class="container identity-hero-grid">
+          <div class="reveal">
+            <div class="identity-kicker">[ REFLEKSI PEMBELAJARAN / SEMESTER 01 ]</div>
+            <h1>
+              WHAT<br />
+              <span>I LEARNED.</span><br />
+              <span class="outline">WHAT CHANGED?</span>
+            </h1>
+            <p>
+              Ruang refleksi pembelajaran Semester 1 yang mendokumentasikan keterkaitan materi perkuliahan dengan pengalaman sebagai calon guru, tantangan yang ditemukan, konsep penting yang dipelajari, perubahan yang ingin dilakukan, serta
+              artefak pembelajaran sebagai bukti pendukung.
+            </p>
+          </div>
+
+          <div class="identity-visual reveal">
+            <div class="visual-word">REFLECT</div>
+            <div class="hero-code-card">
+              <div class="label">Semester 01 / Learning Reflection</div>
+              <h3>Dari pengalaman, menjadi perubahan.</h3>
+              <p>Setiap mata kuliah menjadi bagian dari perjalanan untuk memahami kembali siapa saya sebagai calon guru dan bagaimana saya ingin hadir di ruang kelas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="motion-marquee" aria-hidden="true">
+        <div class="motion-track">
+          <span><b>01</b> CONNECTION</span>
+          <span>CHALLENGE <b>•</b> CONCEPT <b>•</b> CHANGE</span>
+          <span><b>02</b> LEARNING REFLECTION</span>
+          <span>ARTIFACT <b>•</b> EVIDENCE <b>•</b> GROWTH</span>
+          <span><b>03</b> FUTURE TEACHER</span>
+          <span><b>01</b> CONNECTION</span>
+          <span>CHALLENGE <b>•</b> CONCEPT <b>•</b> CHANGE</span>
+          <span><b>02</b> LEARNING REFLECTION</span>
+          <span>ARTIFACT <b>•</b> EVIDENCE <b>•</b> GROWTH</span>
+          <span><b>03</b> FUTURE TEACHER</span>
+        </div>
+      </div>
+
+      <!-- COURSE SELECTOR & PANELS -->
+      <section class="content-section" id="mata-kuliah">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">// 01. COURSE REFLECTION</div>
+              <h2 class="section-title">CHOOSE<br />YOUR <span class="yellow">SUBJECT.</span></h2>
+            </div>
+            <p class="section-description">Pilih mata kuliah untuk menampilkan refleksi dan dokumen pendukung khusus mata kuliah tersebut.</p>
+          </div>
+
+          <div class="course-selector reveal">
+            <div class="selector-top">
+              <div class="selector-label">Semester 01 / Mata Kuliah</div>
+              <div class="selector-hint">Click a subject to explore</div>
+            </div>
+            <div class="course-buttons">
+              <button class="course-btn active" data-course="filosofi">
+                <span>01</span>
+                <strong>Filosofi Pendidikan & Pendidikan Nilai</strong>
+              </button>
+              <button class="course-btn" data-course="peserta-didik">
+                <span>02</span>
+                <strong>Pemahaman Tentang Peserta Didik & Pembelajaran</strong>
+              </button>
+              <button class="course-btn" data-course="mendalam-dasar">
+                <span>03</span>
+                <strong>Pembelajaran Mendalam & Asesmen Dasar</strong>
+              </button>
+              <button class="course-btn" data-course="ppl-terbimbing">
+                <span>04</span>
+                <strong>Praktik Pengalaman Lapangan Terbimbing</strong>
+              </button>
+              <button class="course-btn" data-course="kreatif-inovatif">
+                <span>05</span>
+                <strong>Pembelajaran Kreatif Inovatif</strong>
+              </button>
+              <button class="course-btn" data-course="growth-mindset">
+                <span>06</span>
+                <strong>Pola Berpikir Bertumbuh</strong>
+              </button>
+            </div>
+          </div>
+
+          <!-- ========== PANEL: FILOSOFI ========== -->
+          <article class="course-panel active" id="filosofi">
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 01</div>
+                <h3 class="course-title">Filosofi Pendidikan<br />dan <span class="yellow">Pendidikan Nilai</span></h3>
+              </div>
+              <div class="course-status">Status: <span>Reflected</span></div>
+            </div>
+
+            <!-- PDF DOKUMEN (Ditambahkan sebelum 7 pertanyaan) -->
+            <div class="document-preview-section" style="margin: 40px 0">
+              <div class="section-kicker">DOCUMENT PREVIEW</div>
+              <h4 style="font-family: &quot;Orbitron&quot;, sans-serif; font-size: 20px; margin-bottom: 15px; color: var(--text-light)">LEMBAR KERJA 2 Filosofi Pendidikan</h4>
+              <div class="iframe-container" style="width: 100%; height: 700px; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; background: #1a1a1a">
+                <iframe src="dokumen/LEMBAR KERJA 2 Filosofi Pendidikan.pdf" width="100%" height="100%" style="border: none" title="LEMBAR KERJA 2 Filosofi Pendidikan"></iframe>
+              </div>
+              <div style="margin-top: 15px; text-align: right">
+                <a
+                  href="dokumen/LEMBAR KERJA 2 Filosofi Pendidikan.pdf"
+                  target="_blank"
+                  style="color: var(--yellow); text-decoration: none; font-size: 14px; font-weight: 600; padding: 10px 20px; border: 1px solid var(--yellow); border-radius: 6px; display: inline-block; transition: all 0.3s ease"
+                >
+                  Buka Dokumen di Tab Baru ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="reflection-flow">
+              <!-- CONNECTION -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">01</div>
+                  <div>
+                    <div class="reflection-label">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</div>
+                    <div class="reflection-question">CONNECTION</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>Pada materi yang ada di perkuliahan ini sangat berkaitan erat untuk menjadi fondasi saya menjadi seorang guru kedepannya, terlebih lagi saya bukan berasal dari jurusan Pendidikan melainkan berasal dari ilmu murni.</p>
+                  <p>Sebelumnya saya berpikir menjadi guru hanya mentransfer ilmu yang dimiliki atau dari buku kemudian dijelaskan dan diberikan kepada murid. Hal ini muncul dari pengalaman yang saya alami.</p>
+                  <p>
+                    Ternyata lebih dari itu. Berdasarkan filosofi pendidikan dari Ki Hadjar Dewantara saat mempelajari mata kuliah ini, saya tersadar bahwa guru menjadi pamong atau fasilitator dalam pendidikan. Guru bertugas untuk menuntun
+                    murid untuk bisa menggali potensi yang dimiliki dan membantu untuk mengembangkan potensi murid tersebut.
+                  </p>
+                  <p>
+                    Kemudian guru juga harus memperhatikan kodrat alam dan kodrat zaman dalam membangun potensi murid. Guru tidak hanya mengembangkan potensi berdasarkan kognitif murid, tetapi juga harus menumbuhkan perilaku moral murid
+                    sesuai dengan nilai luhur berdasarkan Pancasila.
+                  </p>
+                  <p>Sehingga guru nantinya diharapkan menjadi teladan yang membantu murid mengasah kepekaan sosial dengan memperhatikan nilai luhur.</p>
+                </div>
+              </div>
+              <!-- CHALLENGE -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">02</div>
+                  <div>
+                    <div class="reflection-label">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</div>
+                    <div class="reflection-question">CHALLENGE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>Dari materi pada perkuliahan ini yang menjadi perbedaan yang menonjol adalah penerapan atau cara saya mengajar.</p>
+                  <p>Pada saat saya PPL saya masih menjadi pusat perhatian murid dalam pembelajaran, sehingga murid masih fokus mendengarkan saya menjelaskan materi. Namun hal ini terjadi ketika saya di pertemuan pertama.</p>
+                  <p>
+                    Di pertemuan berikutnya murid sudah cenderung mendominasi pembelajaran. Kemudian saya juga belum terlalu untuk menumbuhkan pendidikan karakter dalam pembelajaran yang saya lakukan. Saya hanya fokus pada kognitif murid
+                    saja.
+                  </p>
+                </div>
+              </div>
+              <!-- CONCEPT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">03</div>
+                  <div>
+                    <div class="reflection-label">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</div>
+                    <div class="reflection-question">CONCEPT</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <ul>
+                    <li>
+                      <strong>Menuntun dalam pembelajaran:</strong> dalam konsep ini guru menjadi fasilitator untuk memfasilitasi dan mengembangkan potensi yang dimiliki murid, bukan memaksa murid sesuai dengan keinginan guru. Hal ini juga
+                      sesuai dengan kurikulum sekarang yaitu Deep Learning, di mana guru berperan sebagai fasilitator dan pembelajaran berpusat pada murid.
+                    </li>
+                    <li>
+                      <strong>Memperhatikan kodrat alam dan kodrat zaman:</strong> dari konsep ini pembelajaran yang saya terapkan yaitu pembelajaran yang harus relevan dengan kondisi murid baik itu kondisi lingkungan serta membekali murid
+                      dengan keterampilan abad 21 yang sesuai dengan kodrat zaman saat ini.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CHANGE -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">04</div>
+                  <div>
+                    <div class="reflection-label">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</div>
+                    <div class="reflection-question">CHANGE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    Karena saya berasal dari ilmu murni, saya berkomitmen penuh untuk memosisikan diri sebagai fasilitator. Saya akan mengurangi dominasi saya di depan kelas dan lebih banyak merancang aktivitas yang berpusat pada murid
+                    (sejalan dengan konsep Deep Learning), agar murid bisa aktif menggali potensinya sendiri.
+                  </p>
+                  <p>
+                    Kemudian karena sebelumnya saya terlalu fokus pada pencapaian kognitif yaitu materi pembelajaran, saya perlu menyisipkan atau menumbuhkan perilaku moral melalui pembelajaran di kelas, sekaligus menjadi teladan yang baik
+                    untuk murid saya.
+                  </p>
+                </div>
+              </div>
+              <!-- ARTIFACT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">05</div>
+                  <div>
+                    <div class="reflection-label">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</div>
+                    <div class="reflection-question">ARTIFACT / EVIDENCE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    Artefak pembelajaran yang saya jadikan bukti sebagai dukungan hasil refleksi pengalaman belajar ini adalah tugas <strong>LK 2.D Sintesis "I Used to Think..., Now I Think..."</strong> dan tugas
+                    <strong>3.D Peran Guru dalam Pendidikan Nilai</strong>.
+                  </p>
+                </div>
+              </div>
+              <!-- WHY ARTIFACT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">06</div>
+                  <div>
+                    <div class="reflection-label">Mengapa artefak tersebut saya pilih?</div>
+                    <div class="reflection-question">WHY THIS ARTIFACT?</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <ul>
+                    <li>
+                      <strong>LK 2.D Sintesis "I Used to Think...":</strong> saya memilih tugas ini karena tugas ini memberikan saya refleksi terkait proses pemikiran saya sebagai calon guru. Artefak ini merubah cara pikir saya yang tadinya
+                      menganggap pendidikan harus bersifat seragam dan formal, menjadi bahwa pendidikan harus bersifat kontekstual, menghargai budaya/kodrat alam murid serta mengedepankan pendekatan yang kolaboratif.
+                    </li>
+                    <li>
+                      <strong>3.D Peran Guru dalam Pendidikan Nilai:</strong> saya memilih tugas ini karena dari tugas ini menjadi penghubung teori filosofi pendidikan dan pendidikan nilai dengan aksi nyata guru. Pada tugas ini menegaskan
+                      bahwa penanaman nilai karakter bukanlah tugas guru mata pelajaran saja, melainkan tanggung jawab bersama termasuk saya sebagai calon guru yang menjalankan PPL.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- SUPPORTING PART -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">07</div>
+                  <div>
+                    <div class="reflection-label">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</div>
+                    <div class="reflection-question">SUPPORTING PART</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    <strong>LK 2.D Sintesis "I Used to Think...":</strong> bagian yang mendukung refleksi saya adalah pada poin: "Pendidikan yang diberikan kepada orang rimba harus kontekstual dengan budaya... dilakukan melalui dialog,
+                    pemberdayaan, dan kolaborasi agar mereka dapat berkembang tanpa kehilangan jati diri."
+                  </p>
+                  <p>
+                    Bagian tersebut secara langsung mendukung refleksi saya terkait penerapan filosofi pendidikan dari Ki Hadjar Dewantara tentang pentingnya memperhatikan kodrat alam dan kodrat zaman murid, serta penerapan nilai Pancasila
+                    seperti musyawarah dan gotong royong dalam proses pembelajaran.
+                  </p>
+                  <p>
+                    <strong>Tugas 3.D / LK 3.4 "Peran Guru dalam Pendidikan Nilai":</strong> bagian yang mendukung hasil refleksi saya terbagi dalam dua poin utama. Pertama, pada kolom Extend di Tabel Connect-Extend-Challenge, perumusan
+                    empat peran utama guru—sebagai Pamong, Role Model, Motivator, dan Fasilitator—memperkuat refleksi saya tentang bagaimana filosofi Ki Hadjar Dewantara (Ing Ngarsa Sung Tulada, Ing Madya Mangun Karsa, Tut Wuri Handayani)
+                    dan Growth Mindset dapat diterapkan secara riil dalam mendampingi murid.
+                  </p>
+                  <p>
+                    Kedua, pada bagian Refleksi Komitmen Diri, Poin 1 mendukung refleksi bahwa pendidikan nilai merupakan tanggung jawab kolektif seluruh guru, termasuk guru mata pelajaran teknis seperti Informatika. Sementara itu, Poin 3
+                    memperkuat refleksi mengenai strategi konkret yang akan saya terapkan di kelas, seperti melalui pembiasaan keteladanan, penerapan Project-Based Learning (PjBL) untuk melatih kolaborasi, pelaksanaan refleksi bermakna,
+                    serta pemberian Growth Mindset Feedback yang berfokus pada pengapresiasian proses dan usaha belajar murid.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOCUMENT SUPPORT -->
+            <div style="margin-top: 75px">
+              <div class="section-kicker">Supporting Documents</div>
+              <h3 style="font-family: &quot;Orbitron&quot;, sans-serif; font-size: 34px; line-height: 1; margin-top: 10px">ARTEFAK <span class="yellow">PEMBELAJARAN</span></h3>
+              <div class="artifact-grid">
+                <article class="artifact-card">
+                  <div class="artifact-type">Artefact 01 / LK</div>
+                  <h4>LK 2.D Sintesis "I Used to Think..., Now I Think..."</h4>
+                  <p>
+                    Artefak yang digunakan untuk menunjukkan perubahan cara berpikir saya terhadap pendidikan, dari pandangan yang cenderung seragam dan formal menuju pendidikan yang lebih kontekstual, kolaboratif, dan menghargai kodrat
+                    alam murid.
+                  </p>
+                  <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen Filosofi 1.pdf', 'LK 2.D Sintesis')">Lihat Dokumen →</button>
+                </article>
+                <article class="artifact-card">
+                  <div class="artifact-type">Artefact 02 / LK</div>
+                  <h4>3.D / LK 3.4 "Peran Guru dalam Pendidikan Nilai"</h4>
+                  <p>Artefak yang menjadi penghubung antara teori filosofi pendidikan dan pendidikan nilai dengan aksi nyata guru, termasuk peran guru sebagai Pamong, Role Model, Motivator, dan Fasilitator.</p>
+                  <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen Filosofi 2.pdf', '3.D Peran Guru dalam Pendidikan Nilai')">Lihat Dokumen →</button>
+                </article>
+              </div>
+              <div class="evidence-panel">
+                <h4>Kenapa artefak penting dalam e-portfolio?</h4>
+                <p>Artefak bukan sekadar lampiran. Pada halaman ini artefak ditempatkan sebagai bukti yang menghubungkan pengalaman belajar, perubahan pemikiran, dan refleksi saya sebagai calon guru.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PANEL: PESERTA DIDIK ========== -->
+          <article class="course-panel" id="peserta-didik">
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 02</div>
+                <h3 class="course-title">Filosofi Pendidikan<br />dan <span class="yellow">Pendidikan Nilai</span></h3>
+              </div>
+              <div class="course-status">Status: <span>Reflected</span></div>
+            </div>
+
+            <div class="reflection-flow">
+              <!-- CONNECTION -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">01</div>
+                  <div>
+                    <div class="reflection-label">Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</div>
+                    <div class="reflection-question">CONNECTION</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>Pada materi yang ada di perkuliahan ini sangat berkaitan erat untuk menjadi fondasi saya menjadi seorang guru kedepannya, terlebih lagi saya bukan berasal dari jurusan Pendidikan melainkan berasal dari ilmu murni.</p>
+                  <p>Sebelumnya saya berpikir menjadi guru hanya mentransfer ilmu yang dimiliki atau dari buku kemudian dijelaskan dan diberikan kepada murid. Hal ini muncul dari pengalaman yang saya alami.</p>
+                  <p>
+                    Ternyata lebih dari itu. Berdasarkan filosofi pendidikan dari Ki Hadjar Dewantara saat mempelajari mata kuliah ini, saya tersadar bahwa guru menjadi pamong atau fasilitator dalam pendidikan. Guru bertugas untuk menuntun
+                    murid untuk bisa menggali potensi yang dimiliki dan membantu untuk mengembangkan potensi murid tersebut.
+                  </p>
+                  <p>
+                    Kemudian guru juga harus memperhatikan kodrat alam dan kodrat zaman dalam membangun potensi murid. Guru tidak hanya mengembangkan potensi berdasarkan kognitif murid, tetapi juga harus menumbuhkan perilaku moral murid
+                    sesuai dengan nilai luhur berdasarkan Pancasila.
+                  </p>
+                  <p>Sehingga guru nantinya diharapkan menjadi teladan yang membantu murid mengasah kepekaan sosial dengan memperhatikan nilai luhur.</p>
+                </div>
+              </div>
+              <!-- CHALLENGE -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">02</div>
+                  <div>
+                    <div class="reflection-label">Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</div>
+                    <div class="reflection-question">CHALLENGE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>Dari materi pada perkuliahan ini yang menjadi perbedaan yang menonjol adalah penerapan atau cara saya mengajar.</p>
+                  <p>Pada saat saya PPL saya masih menjadi pusat perhatian murid dalam pembelajaran, sehingga murid masih fokus mendengarkan saya menjelaskan materi. Namun hal ini terjadi ketika saya di pertemuan pertama.</p>
+                  <p>
+                    Di pertemuan berikutnya murid sudah cenderung mendominasi pembelajaran. Kemudian saya juga belum terlalu untuk menumbuhkan pendidikan karakter dalam pembelajaran yang saya lakukan. Saya hanya fokus pada kognitif murid
+                    saja.
+                  </p>
+                </div>
+              </div>
+              <!-- CONCEPT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">03</div>
+                  <div>
+                    <div class="reflection-label">Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</div>
+                    <div class="reflection-question">CONCEPT</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <ul>
+                    <li>
+                      <strong>Menuntun dalam pembelajaran:</strong> dalam konsep ini guru menjadi fasilitator untuk memfasilitasi dan mengembangkan potensi yang dimiliki murid, bukan memaksa murid sesuai dengan keinginan guru. Hal ini juga
+                      sesuai dengan kurikulum sekarang yaitu Deep Learning, di mana guru berperan sebagai fasilitator dan pembelajaran berpusat pada murid.
+                    </li>
+                    <li>
+                      <strong>Memperhatikan kodrat alam dan kodrat zaman:</strong> dari konsep ini pembelajaran yang saya terapkan yaitu pembelajaran yang harus relevan dengan kondisi murid baik itu kondisi lingkungan serta membekali murid
+                      dengan keterampilan abad 21 yang sesuai dengan kodrat zaman saat ini.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CHANGE -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">04</div>
+                  <div>
+                    <div class="reflection-label">Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</div>
+                    <div class="reflection-question">CHANGE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    Karena saya berasal dari ilmu murni, saya berkomitmen penuh untuk memosisikan diri sebagai fasilitator. Saya akan mengurangi dominasi saya di depan kelas dan lebih banyak merancang aktivitas yang berpusat pada murid
+                    (sejalan dengan konsep Deep Learning), agar murid bisa aktif menggali potensinya sendiri.
+                  </p>
+                  <p>
+                    Kemudian karena sebelumnya saya terlalu fokus pada pencapaian kognitif yaitu materi pembelajaran, saya perlu menyisipkan atau menumbuhkan perilaku moral melalui pembelajaran di kelas, sekaligus menjadi teladan yang baik
+                    untuk murid saya.
+                  </p>
+                </div>
+              </div>
+              <!-- ARTIFACT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">05</div>
+                  <div>
+                    <div class="reflection-label">Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</div>
+                    <div class="reflection-question">ARTIFACT / EVIDENCE</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    Artefak pembelajaran yang saya jadikan bukti sebagai dukungan hasil refleksi pengalaman belajar ini adalah tugas <strong>LK 2.D Sintesis "I Used to Think..., Now I Think..."</strong> dan tugas
+                    <strong>3.D Peran Guru dalam Pendidikan Nilai</strong>.
+                  </p>
+                </div>
+              </div>
+              <!-- WHY ARTIFACT -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">06</div>
+                  <div>
+                    <div class="reflection-label">Mengapa artefak tersebut saya pilih?</div>
+                    <div class="reflection-question">WHY THIS ARTIFACT?</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <ul>
+                    <li>
+                      <strong>LK 2.D Sintesis "I Used to Think...":</strong> saya memilih tugas ini karena tugas ini memberikan saya refleksi terkait proses pemikiran saya sebagai calon guru. Artefak ini merubah cara pikir saya yang tadinya
+                      menganggap pendidikan harus bersifat seragam dan formal, menjadi bahwa pendidikan harus bersifat kontekstual, menghargai budaya/kodrat alam murid serta mengedepankan pendekatan yang kolaboratif.
+                    </li>
+                    <li>
+                      <strong>3.D Peran Guru dalam Pendidikan Nilai:</strong> saya memilih tugas ini karena dari tugas ini menjadi penghubung teori filosofi pendidikan dan pendidikan nilai dengan aksi nyata guru. Pada tugas ini menegaskan
+                      bahwa penanaman nilai karakter bukanlah tugas guru mata pelajaran saja, melainkan tanggung jawab bersama termasuk saya sebagai calon guru yang menjalankan PPL.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- SUPPORTING PART -->
+              <div class="reflection-card">
+                <div class="reflection-top">
+                  <div class="reflection-number">07</div>
+                  <div>
+                    <div class="reflection-label">Bagian mana dari artefak ini yang mendukung hasil refleksi saya?</div>
+                    <div class="reflection-question">SUPPORTING PART</div>
+                  </div>
+                </div>
+                <div class="reflection-answer">
+                  <p>
+                    <strong>LK 2.D Sintesis "I Used to Think...":</strong> bagian yang mendukung refleksi saya adalah pada poin: "Pendidikan yang diberikan kepada orang rimba harus kontekstual dengan budaya... dilakukan melalui dialog,
+                    pemberdayaan, dan kolaborasi agar mereka dapat berkembang tanpa kehilangan jati diri."
+                  </p>
+                  <p>
+                    Bagian tersebut secara langsung mendukung refleksi saya terkait penerapan filosofi pendidikan dari Ki Hadjar Dewantara tentang pentingnya memperhatikan kodrat alam dan kodrat zaman murid, serta penerapan nilai Pancasila
+                    seperti musyawarah dan gotong royong dalam proses pembelajaran.
+                  </p>
+                  <p>
+                    <strong>Tugas 3.D / LK 3.4 "Peran Guru dalam Pendidikan Nilai":</strong> bagian yang mendukung hasil refleksi saya terbagi dalam dua poin utama. Pertama, pada kolom Extend di Tabel Connect-Extend-Challenge, perumusan
+                    empat peran utama guru—sebagai Pamong, Role Model, Motivator, dan Fasilitator—memperkuat refleksi saya tentang bagaimana filosofi Ki Hadjar Dewantara (Ing Ngarsa Sung Tulada, Ing Madya Mangun Karsa, Tut Wuri Handayani)
+                    dan Growth Mindset dapat diterapkan secara riil dalam mendampingi murid.
+                  </p>
+                  <p>
+                    Kedua, pada bagian Refleksi Komitmen Diri, Poin 1 mendukung refleksi bahwa pendidikan nilai merupakan tanggung jawab kolektif seluruh guru, termasuk guru mata pelajaran teknis seperti Informatika. Sementara itu, Poin 3
+                    memperkuat refleksi mengenai strategi konkret yang akan saya terapkan di kelas, seperti melalui pembiasaan keteladanan, penerapan Project-Based Learning (PjBL) untuk melatih kolaborasi, pelaksanaan refleksi bermakna,
+                    serta pemberian Growth Mindset Feedback yang berfokus pada pengapresiasian proses dan usaha belajar murid.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOCUMENT SUPPORT -->
+            <div style="margin-top: 75px">
+              <div class="section-kicker">Supporting Documents</div>
+              <h3 style="font-family: &quot;Orbitron&quot;, sans-serif; font-size: 34px; line-height: 1; margin-top: 10px">ARTEFAK <span class="yellow">PEMBELAJARAN</span></h3>
+              <div class="artifact-grid">
+                <article class="artifact-card">
+                  <div class="artifact-type">Artefact 01 / LK</div>
+                  <h4>LK 2.D Sintesis "I Used to Think..., Now I Think..."</h4>
+                  <p>
+                    Artefak yang digunakan untuk menunjukkan perubahan cara berpikir saya terhadap pendidikan, dari pandangan yang cenderung seragam dan formal menuju pendidikan yang lebih kontekstual, kolaboratif, dan menghargai kodrat
+                    alam murid.
+                  </p>
+                  <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen Filosofi 1.pdf', 'LK 2.D Sintesis')">Lihat Dokumen →</button>
+                </article>
+                <article class="artifact-card">
+                  <div class="artifact-type">Artefact 02 / LK</div>
+                  <h4>3.D / LK 3.4 "Peran Guru dalam Pendidikan Nilai"</h4>
+                  <p>Artefak yang menjadi penghubung antara teori filosofi pendidikan dan pendidikan nilai dengan aksi nyata guru, termasuk peran guru sebagai Pamong, Role Model, Motivator, dan Fasilitator.</p>
+                  <button type="button" class="artifact-link" onclick="openDocument('dokumen/Dokumen Filosofi 2.pdf', '3.D Peran Guru dalam Pendidikan Nilai')">Lihat Dokumen →</button>
+                </article>
+              </div>
+              <div class="evidence-panel">
+                <h4>Kenapa artefak penting dalam e-portfolio?</h4>
+                <p>Artefak bukan sekadar lampiran. Pada halaman ini artefak ditempatkan sebagai bukti yang menghubungkan pengalaman belajar, perubahan pemikiran, dan refleksi saya sebagai calon guru.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PANEL: MENDALAM DASAR ========== -->
+          <article class="course-panel" id="mendalam-dasar">
+            <!-- konten lengkap silakan copy dari kode asli dan sesuaikan class -->
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 03</div>
+                <h3 class="course-title">Pembelajaran Mendalam<br />dan <span class="yellow">Asesmen Dasar</span></h3>
+              </div>
+              <div class="course-status">Status: <span>Reflected</span></div>
+            </div>
+            <div class="reflection-flow">
+              <!-- reflection cards -->
+            </div>
+            <div style="margin-top: 75px">
+              <!-- artifact -->
+            </div>
+          </article>
+
+          <!-- ========== PANEL: PPL TERBIMBING ========== -->
+          <article class="course-panel" id="ppl-terbimbing">
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 04</div>
+                <h3 class="course-title">Praktik Pengalaman Lapangan<br /><span class="yellow">Terbimbing</span></h3>
+              </div>
+              <div class="course-status">Status: <span>Reflected</span></div>
+            </div>
+            <div class="reflection-flow">
+              <!-- reflection cards -->
+            </div>
+            <div style="margin-top: 75px">
+              <!-- artifact -->
+            </div>
+          </article>
+
+          <!-- ========== PANEL: KREATIF INOVATIF ========== -->
+          <article class="course-panel" id="kreatif-inovatif">
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 05</div>
+                <h3 class="course-title">Pembelajaran <span class="yellow">Kreatif Inovatif</span></h3>
+              </div>
+              <div class="course-status">Status: <span>To Be Added</span></div>
+            </div>
+            <div class="empty-panel">
+              <div class="big">04</div>
+              <h3>Refleksi Mata Kuliah Belum Diisi</h3>
+              <p>Area ini sudah disiapkan untuk refleksi, bukti pembelajaran, dan dokumen pendukung mata kuliah Pembelajaran Kreatif Inovatif.</p>
+            </div>
+          </article>
+
+          <!-- ========== PANEL: GROWTH MINDSET ========== -->
+          <article class="course-panel" id="growth-mindset">
+            <div class="course-header">
+              <div>
+                <div class="course-code">SEMESTER 01 / COURSE 06</div>
+                <h3 class="course-title">Pola Berpikir <span class="yellow">Bertumbuh</span></h3>
+              </div>
+              <div class="course-status">Status: <span>To Be Added</span></div>
+            </div>
+            <div class="empty-panel">
+              <div class="big">05</div>
+              <h3>Refleksi Mata Kuliah Belum Diisi</h3>
+              <p>Area ini sudah disiapkan untuk menampilkan refleksi pembelajaran, perubahan pemikiran, dan artefak pendukung mata kuliah Pola Berpikir Bertumbuh.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- PDF MODAL -->
+    <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfTitle">
+      <div class="pdf-modal-backdrop" onclick="closeDocument()"></div>
+      <div class="pdf-viewer">
+        <div class="pdf-header">
+          <div class="pdf-header-meta">
+            <div class="pdf-label">Learning Artifact / Document Preview</div>
+            <h3 class="pdf-title" id="pdfTitle">Document Preview</h3>
+          </div>
+          <div class="pdf-actions">
+            <a href="#" target="_blank" rel="noopener noreferrer" id="pdfExternal" class="pdf-open"> Open New Tab </a>
+            <button type="button" class="pdf-close" id="pdfClose" aria-label="Tutup dokumen">×</button>
+          </div>
+        </div>
+        <div class="pdf-container">
+          <iframe id="pdfFrame" src="" title="PDF Document Viewer" loading="lazy"></iframe>
+          <div class="pdf-fallback" id="pdfFallback">
+            <div class="pdf-fallback-inner">
+              <strong>PDF</strong>
+              <p>Browser tidak menampilkan PDF secara langsung pada mode ini. Gunakan tombol <b>Open New Tab</b> di bagian atas untuk melihat dokumen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container reveal">
+        <div class="footer-title">KEEP<br />LEARNING & REFLECTING</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+          <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
+      </div>
+    </footer>
+
+    <!-- MASTER APP SCRIPT -->
+    <script src="js/app.js"></script>
+
+    <!-- PAGE SPECIFIC: COURSE TABS & PDF VIEWER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Course Filter Tabs
+        const courseButtons = document.querySelectorAll(".course-btn");
+        const coursePanels = document.querySelectorAll(".course-panel");
+        courseButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const target = button.dataset.course;
+            courseButtons.forEach((btn) => btn.classList.remove("active"));
+            coursePanels.forEach((panel) => panel.classList.remove("active"));
+            button.classList.add("active");
+            const targetPanel = document.getElementById(target);
+            if (targetPanel) {
+              targetPanel.classList.add("active");
+              document.querySelector(".course-selector").scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+
+        // PDF Viewer Modal
+        const pdfModal = document.getElementById("pdfModal");
+        const pdfFrame = document.getElementById("pdfFrame");
+        const pdfTitle = document.getElementById("pdfTitle");
+        const pdfExternal = document.getElementById("pdfExternal");
+        const pdfClose = document.getElementById("pdfClose");
+        const pdfFallback = document.getElementById("pdfFallback");
+        let lastFocusedElement = null;
+
+        window.openDocument = function (file, title) {
+          lastFocusedElement = document.activeElement;
+          pdfTitle.textContent = title || "Document Preview";
+          pdfExternal.href = file;
+          pdfFallback.classList.remove("show");
+          pdfFrame.style.display = "block";
+          pdfFrame.src = file;
+          pdfModal.classList.add("active");
+          pdfModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          setTimeout(() => pdfClose.focus(), 30);
+        };
+
+        window.closeDocument = function () {
+          pdfModal.classList.remove("active");
+          pdfModal.setAttribute("aria-hidden", "true");
+          pdfFrame.src = "";
+          document.body.style.overflow = "";
+          if (lastFocusedElement) lastFocusedElement.focus();
+        };
+
+        if (pdfClose) pdfClose.addEventListener("click", closeDocument);
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && pdfModal && pdfModal.classList.contains("active")) closeDocument();
+        });
+        if (pdfFrame) {
+          pdfFrame.addEventListener("error", () => {
+            pdfFrame.style.display = "none";
+            pdfFallback.classList.add("show");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

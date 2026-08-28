@@ -3,42 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>E-Portfolio Seminar Pendidikan | Ilyas Fandhi Anggara</title>
-    <meta name="description" content="E-Portfolio Seminar Pendidikan - Cyber Y2K Glass Edition" />
+    <meta name="description" content="E-Portfolio Seminar Pendidikan - Ilyas Fandhi Anggara, PPG Calon Guru UNY 2026." />
 
     <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
-    <!-- PRELOADER (UPDATED TEXT) -->
-    <div id="preloader">
-      <div class="loader-spinner"></div>
-      <div class="loader-text">SELAMAT DATANG DI E-PORTFOLIO SEMINAR PENDIDIKAN ILYAS FANDHI ANGGARA</div>
-    </div>
-
     <!-- CUSTOM CURSOR -->
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- BACKGROUND GLOW MESH & GRID -->
-    <div class="bg-wrapper">
-      <div class="grid-background"></div>
-      <div class="glow-orb glow-orb-1"></div>
-      <div class="glow-orb glow-orb-2"></div>
-      <div class="glow-orb glow-orb-3"></div>
+    <!-- LOADING SCREEN -->
+    <div class="loader-overlay" id="loaderOverlay">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="loader-logo-img" />
+        </div>
+        <div class="loader-brand">E-PORTFOLIO</div>
+        <div class="loader-subtitle">SEMINAR PENDIDIKAN</div>
+        <div class="loader-bar-wrap">
+          <div class="loader-bar" id="loaderBar"></div>
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+        <div class="loader-tagline">Ilyas Fandhi Anggara · PPG Calon Guru UNY 2026</div>
+      </div>
+      <div class="loader-corner loader-corner-tl">◤</div>
+      <div class="loader-corner loader-corner-tr">◥</div>
+      <div class="loader-corner loader-corner-bl">◣</div>
+      <div class="loader-corner loader-corner-br">◢</div>
+      <div class="loader-grid"></div>
+      <div class="loader-scanline"></div>
     </div>
 
-    <!-- NAVBAR CAPSULE -->
+    <!-- BACKGROUND GLOW MESH -->
+    <div class="bg-wrapper">
+      <!-- CANVAS ANIMASI GARIS MELENGKUNG -->
+      <canvas id="bgCanvas" class="bg-canvas"></canvas>
+      <div class="bg-grid"></div>
+      <div class="glow-orb-container orb-container-1">
+        <div class="glow-orb orb-1"></div>
+      </div>
+      <div class="glow-orb-container orb-container-2">
+        <div class="glow-orb orb-2"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav-inner">
-        <a href="#home" class="brand">
+        <a href="index.html" class="brand">
           <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
-          <span>E-PORTFOLIO</span>
+          <span>PORTFOLIO</span>
         </a>
 
         <nav class="nav-center">
@@ -48,67 +69,54 @@
         </nav>
 
         <div class="nav-right">
-          <div class="live-status">
-            <span class="live-dot"></span>
-            SYS_ONLINE
-          </div>
-          <button class="menu-button" id="menuButton">☰</button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+            <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+            <span class="theme-label" id="themeLabel">LIGHT</span>
+          </button>
         </div>
       </div>
     </header>
 
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-close" id="mobileClose">×</button>
-      <div class="mobile-links">
-        <a href="identitas.html">IDENTITAS DIRI</a>
-        <a href="refleksi-sem1.html">REFLEKSI SEMESTER 1</a>
-        <a href="refleksi-sem2.html">REFLEKSI SEMESTER 2</a>
-      </div>
-    </div>
-
     <main>
       <!-- HERO SECTION -->
       <section class="hero" id="home">
-        <div class="hero-container">
-          <div class="hero-capsule-bg"></div>
+        <div class="hero-container reveal">
+          <div class="hero-bg-text">E-PORTOFOLIO</div>
+          <!-- GRID split (FOTO KIRI, TULISAN KANAN) -->
+          <div class="hero-content">
+            <div class="hero-image-wrapper">
+              <img src="images/fototampan3.png" alt="Foto Profil" class="hero-image" />
+            </div>
 
-          <div class="hero-word">E-PORTFOLIO</div>
-          <div class="hero-word-pixel">SEMINAR PENDIDIKAN</div>
-
-          <div class="hero-image-wrapper">
-            <img src="images/fototampan3.png" alt="Foto Profil" class="hero-image" />
+            <div class="hero-name">
+              <div class="hero-kicker">[ SEMINAR PENDIDIKAN ]</div>
+              <h1>Ilyas Fandhi<br />Anggara</h1>
+              <div class="hero-role">Pendidikan Informatika • Universitas Negeri Yogyakarta</div>
+              <p>Dokumentasi perjalanan belajar, refleksi, pengalaman, dan inovasi pembelajaran selama perkuliahan PPG Calon Guru.</p>
+            </div>
           </div>
 
-          <div class="hero-name">
-            <div class="hero-kicker">[ PPG CALON GURU ]</div>
-            <h1>Ilyas <span style="color: var(--cyan-neon)">Fandhi Anggara</span></h1>
-            <div class="hero-role">Pendidikan Informatika • UNY</div>
-            <p>Dokumentasi perjalanan belajar, refleksi, pengalaman, dan inovasi pembelajaran selama perkuliahan PPG.</p>
-          </div>
-
+          <!-- STATISTIK (DI BAWAH CONTENT HERO) -->
           <div class="hero-stats">
             <div class="stat-card">
-              <span class="stat-label">SEMESTER</span>
-              <div class="stat-value">02</div>
-              <div class="stat-sub">PPG Calon Guru</div>
+              <div class="stat-value" data-target="2" data-pad="true">02</div>
+              <span class="stat-label">Semester Tempuh</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">REFLEKSI</span>
-              <div class="stat-value">11</div>
-              <div class="stat-sub">Mata Kuliah</div>
+              <div class="stat-value" data-target="11">11</div>
+              <span class="stat-label">Mata Kuliah</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">TAHUN</span>
-              <div class="stat-value">2026</div>
-              <div class="stat-sub">PPG Calon Guru</div>
+              <div class="stat-value" data-target="2026">2026</div>
+              <span class="stat-label">Tahun Angkatan</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- MOVING MARQUEE -->
-      <div class="motion-marquee" aria-hidden="true">
+      <div class="motion-marquee reveal" aria-hidden="true">
         <div class="motion-track">
           <span><b>[01]</b> SEMINAR PENDIDIKAN</span>
           <span>LEARNING <b>✦</b> REFLECTION <b>✦</b> INNOVATION</span>
@@ -123,23 +131,22 @@
 
       <!-- ABOUT SECTION -->
       <section id="about">
-        <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-          <div class="section-top reveal">
+        <div class="container reveal">
+          <div class="section-top">
             <div>
-              <div class="section-kicker">// 01. PROFILE</div>
-              <h2 class="section-title">WHO<br />AM I?</h2>
+              <div class="section-kicker">PROFILE</div>
+              <h2 class="section-title">WHO AM I?</h2>
             </div>
             <p class="section-description">Identitas, latar belakang pendidikan, serta komitmen dalam mengembangkan kompetensi sebagai pendidik profesional di era digital.</p>
           </div>
 
-          <div class="about-grid reveal">
+          <div class="about-grid">
             <div class="about-image">
               <img src="images/PAS_foto_ppg.png" alt="Profil" />
-              <div class="about-image-number">USER_ID: ILYAS FANDHI ANGGARA // UNY 2026</div>
             </div>
 
             <div class="about-text">
-              <h3>Belajar tidak hanya tentang mengetahui, tetapi juga tentang <span style="color: var(--cyan-neon)">berkembang.</span></h3>
+              <h3>Belajar tidak hanya tentang mengetahui, tetapi juga tentang berkembang.</h3>
               <p>Saya merupakan mahasiswa PPG Calon Guru yang memiliki ketertarikan tinggi pada dunia pendidikan, teknologi informasi, dan inovasi pembelajaran.</p>
               <p>Melalui Seminar Pendidikan, saya mengevaluasi perspektif, mengeksplorasi strategi pengajaran modern, serta mengintegrasikan teknologi ke dalam ruang kelas.</p>
 
@@ -168,34 +175,32 @@
 
       <!-- PPG JOURNEY -->
       <section id="ppg-journey">
-        <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-          <div class="section-top reveal">
+        <div class="container reveal">
+          <div class="section-top">
             <div>
-              <div class="section-kicker">// 02. LEARNING ROADMAP</div>
-              <h2 class="section-title">PPG<br />JOURNEY</h2>
+              <div class="section-kicker">LEARNING ROADMAP</div>
+              <h2 class="section-title">PPG JOURNEY</h2>
             </div>
             <p class="section-description">Perjalanan reflektif dua semester dalam mengasah kompetensi pedagogik, kepribadian, sosial, dan profesional.</p>
           </div>
 
-          <div class="cards-grid reveal">
+          <div class="cards-grid">
             <div class="dark-card">
               <div class="card-number">PHASE_01 // SEMESTER 01</div>
               <h3>SEMESTER 01</h3>
               <p>Membangun fondasi filosofis pendidikan, memahami karakteristik peserta didik, prinsip pengajaran, serta pengalaman PPL Terbimbing.</p>
-              <div class="card-meta">6 MATAKULIAH COMPLETED</div>
-              <a href="refleksi-sem-1.html" class="card-link">EXPLORE REFLECTION →</a>
+              <a href="refleksi-sem1.html" class="card-link">EXPLORE REFLECTION ↗</a>
             </div>
 
             <div class="dark-card">
               <div class="card-number">PHASE_02 // SEMESTER 02</div>
               <h3>SEMESTER 02</h3>
               <p>Pengembangan tingkat lanjut melalui Pembelajaran Sosial Emosional, Projek Kepemimpinan, Pengembangan Keprofesian, dan PPL Mandiri.</p>
-              <div class="card-meta">5 MATAKULIAH COMPLETED</div>
-              <a href="refleksi-sem-2.html" class="card-link">EXPLORE REFLECTION →</a>
+              <a href="refleksi-sem-2.html" class="card-link">EXPLORE REFLECTION ↗</a>
             </div>
           </div>
 
-          <div class="journey-process reveal">
+          <div class="journey-process">
             <div class="journey-process-item">
               <span>01 / LEARN</span>
               <strong>THEORY</strong>
@@ -222,127 +227,133 @@
 
       <!-- MATERI SECTION -->
       <section id="materi">
-        <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-          <div class="section-top reveal">
+        <div class="container reveal">
+          <div class="section-top">
             <div>
-              <div class="section-kicker">// 03. ACADEMIC MODULES</div>
-              <h2 class="section-title">WHAT<br />I LEARNED</h2>
+              <div class="section-kicker">ACADEMIC MODULES</div>
+              <h2 class="section-title">WHAT I LEARNED</h2>
             </div>
             <p class="section-description">Rangkuman mata kuliah yang telah ditempuh selama masa studi PPG Calon Guru.</p>
           </div>
 
-          <div class="semester-label reveal">
+          <!-- INTERACTIVE FILTER & SEARCH BAR -->
+          <div class="materials-filter-bar">
+            <div class="materials-search-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="materialSearch" class="materials-search-input" placeholder="Cari topik atau mata kuliah..." />
+            </div>
+            <div class="filter-chips" id="materialFilterChips">
+              <button type="button" class="filter-chip active" data-filter="all">Semua</button>
+              <button type="button" class="filter-chip" data-filter="sem1">Semester 1</button>
+              <button type="button" class="filter-chip" data-filter="sem2">Semester 2</button>
+              <button type="button" class="filter-chip" data-filter="PEDAGOGY">Pedagogy</button>
+              <button type="button" class="filter-chip" data-filter="INNOVATION">Innovation</button>
+              <button type="button" class="filter-chip" data-filter="PRACTICE">Practice</button>
+              <button type="button" class="filter-chip" data-filter="LEADERSHIP">Leadership</button>
+            </div>
+          </div>
+
+          <div class="semester-label">
             <span>SEMESTER 01</span>
             <div></div>
           </div>
 
-          <div class="material-list reveal">
-            <div class="material-item">
+          <div class="material-list" id="sem1-list">
+            <div class="material-item" data-sem="sem1" data-tag="PHILOSOPHY">
               <div class="material-number">01</div>
               <div>
                 <div class="material-title">Filosofi Pendidikan dan Pendidikan Nilai</div>
-                <div class="material-description">Memahami landasan filosofis pendidikan serta pentingnya nilai dalam proses pendidikan sebagai dasar dalam membentuk pembelajaran yang berpihak pada peserta didik.</div>
+                <div class="material-description">Memahami landasan filosofis pendidikan serta pentingnya nilai dalam proses pendidikan sebagai dasar dalam membentuk pembelajaran.</div>
               </div>
               <div class="material-tag">PHILOSOPHY</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem1" data-tag="LEARNING">
               <div class="material-number">02</div>
               <div>
                 <div class="material-title">Pembelajaran Mendalam dan Asesmen Dasar</div>
-                <div class="material-description">Mempelajari konsep pembelajaran mendalam serta dasar-dasar asesmen sebagai bagian dari proses untuk memahami perkembangan dan capaian belajar peserta didik.</div>
+                <div class="material-description">Mempelajari konsep pembelajaran mendalam serta dasar-dasar asesmen perkembangan dan capaian belajar peserta didik.</div>
               </div>
-              <div class="material-tag">DEEP LEARNING</div>
+              <div class="material-tag">LEARNING</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem1" data-tag="PEDAGOGY">
               <div class="material-number">03</div>
               <div>
-                <div class="material-title">Pemahaman Tentang Peserta Didik dan Pembelajaran</div>
-                <div class="material-description">Memahami karakteristik, kebutuhan, potensi, dan keberagaman peserta didik sebagai dasar dalam merancang pembelajaran yang sesuai dengan kondisi dan kebutuhan mereka.</div>
+                <div class="material-title">Pemahaman Tentang Peserta Didik</div>
+                <div class="material-description">Memahami karakteristik, kebutuhan, potensi, dan keberagaman peserta didik sebagai dasar merancang pembelajaran.</div>
               </div>
               <div class="material-tag">PEDAGOGY</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem1" data-tag="INNOVATION">
               <div class="material-number">04</div>
               <div>
                 <div class="material-title">Pembelajaran Kreatif Inovatif</div>
-                <div class="material-description">Mengembangkan kemampuan dalam merancang pembelajaran yang kreatif, inovatif, dan menarik agar peserta didik dapat terlibat secara aktif dalam proses pembelajaran.</div>
+                <div class="material-description">Mengembangkan kemampuan dalam merancang pembelajaran yang kreatif, inovatif, dan menarik.</div>
               </div>
               <div class="material-tag">INNOVATION</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem1" data-tag="MINDSET">
               <div class="material-number">05</div>
               <div>
                 <div class="material-title">Pola Berpikir Bertumbuh</div>
-                <div class="material-description">Membangun pola pikir bertumbuh dalam menghadapi proses belajar, tantangan, kesalahan, dan berbagai pengalaman sebagai bagian dari proses pengembangan diri.</div>
+                <div class="material-description">Membangun pola pikir bertumbuh dalam menghadapi proses belajar, tantangan, dan kesalahan.</div>
               </div>
-              <div class="material-tag">GROWTH MINDSET</div>
+              <div class="material-tag">MINDSET</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem1" data-tag="PRACTICE">
               <div class="material-number">06</div>
               <div>
                 <div class="material-title">PPL Terbimbing</div>
-                <div class="material-description">Memperoleh pengalaman awal dalam melaksanakan praktik pembelajaran melalui kegiatan PPL dengan bimbingan, refleksi, dan evaluasi untuk mengembangkan kompetensi sebagai calon pendidik..</div>
+                <div class="material-description">Memperoleh pengalaman awal dalam melaksanakan praktik pembelajaran dengan bimbingan dan evaluasi.</div>
               </div>
-              <div class="material-tag">PPL</div>
+              <div class="material-tag">PRACTICE</div>
             </div>
           </div>
 
-          <div class="semester-label reveal" style="margin-top: 50px">
+          <div class="semester-label" style="margin-top: 60px">
             <span>SEMESTER 02</span>
             <div></div>
           </div>
 
-          <div class="material-list reveal">
-            <div class="material-item">
+          <div class="material-list" id="sem2-list">
+            <div class="material-item" data-sem="sem2" data-tag="EMOTIONAL">
               <div class="material-number">07</div>
               <div>
                 <div class="material-title">Pembelajaran Sosial Emosional</div>
-                <div class="material-description">Memahami pentingnya pengembangan kompetensi sosial dan emosional dalam menciptakan lingkungan pembelajaran yang aman, positif, dan mendukung perkembangan peserta didik..</div>
+                <div class="material-description">Memahami pentingnya pengembangan kompetensi sosial dan emosional dalam menciptakan lingkungan yang positif.</div>
               </div>
-              <div class="material-tag">SOCIAL EMOTIONAL</div>
+              <div class="material-tag">EMOTIONAL</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem2" data-tag="ADVANCED">
               <div class="material-number">08</div>
               <div>
                 <div class="material-title">Pembelajaran Mendalam dan Asesmen Lanjut</div>
-                <div class="material-description">Memperdalam penerapan pembelajaran mendalam dan asesmen untuk mendukung proses pembelajaran yang bermakna serta memperoleh gambaran perkembangan peserta didik secara lebih menyeluruh.</div>
+                <div class="material-description">Memperdalam penerapan pembelajaran mendalam dan asesmen untuk mendukung proses pembelajaran yang bermakna.</div>
               </div>
-              <div class="material-tag">ADVANCE</div>
+              <div class="material-tag">ADVANCED</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem2" data-tag="LEADERSHIP">
               <div class="material-number">09</div>
               <div>
                 <div class="material-title">Projek Kepemimpinan</div>
-                <div class="material-description">Mengembangkan kemampuan kepemimpinan melalui perencanaan, pelaksanaan, kolaborasi, dan evaluasi sebuah projek yang memberikan pengalaman dalam menyelesaikan permasalahan secara nyata.</div>
+                <div class="material-description">Mengembangkan kemampuan kepemimpinan melalui perencanaan dan kolaborasi menyelesaikan permasalahan nyata.</div>
               </div>
               <div class="material-tag">LEADERSHIP</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem2" data-tag="PROFESSIONAL">
               <div class="material-number">10</div>
               <div>
                 <div class="material-title">Pengembangan Keprofesian Berkelanjutan</div>
-                <div class="material-description">Memahami pentingnya pengembangan kompetensi secara berkelanjutan melalui refleksi, pembelajaran, dan berbagai kegiatan pengembangan profesional sebagai seorang pendidik.</div>
+                <div class="material-description">Memahami pentingnya pengembangan kompetensi secara berkelanjutan melalui refleksi dan pembelajaran profesional.</div>
               </div>
-              <div class="material-tag">PROFESIONAL</div>
+              <div class="material-tag">PROFESSIONAL</div>
             </div>
-
-            <div class="material-item">
+            <div class="material-item" data-sem="sem2" data-tag="PRACTICE">
               <div class="material-number">11</div>
               <div>
                 <div class="material-title">PPL Mandiri</div>
-                <div class="material-description">
-                  PPL Mandiri Mengimplementasikan kompetensi yang telah diperoleh melalui praktik pembelajaran secara lebih mandiri, mulai dari perencanaan, pelaksanaan, asesmen, hingga refleksi pembelajaran.
-                </div>
+                <div class="material-description">Mengimplementasikan kompetensi secara mandiri mulai dari perencanaan, pelaksanaan, hingga refleksi.</div>
               </div>
-              <div class="material-tag">PP MANDIRI</div>
+              <div class="material-tag">PRACTICE</div>
             </div>
           </div>
         </div>
@@ -350,16 +361,16 @@
 
       <!-- REFLECTION SECTION -->
       <section id="refleksi">
-        <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-          <div class="section-top reveal">
+        <div class="container reveal">
+          <div class="section-top">
             <div>
-              <div class="section-kicker">// 04. CRITICAL REFLECTION</div>
-              <h2 class="section-title">INSIGHTS &<br />GROWTH</h2>
+              <div class="section-kicker">CRITICAL REFLECTION</div>
+              <h2 class="section-title">INSIGHTS & GROWTH</h2>
             </div>
             <p class="section-description">Refleksi mendalam atas perubahan mindset dan peningkatan kompetensi profesional.</p>
           </div>
 
-          <div class="reflection-grid reveal">
+          <div class="reflection-grid">
             <div class="reflection-card">
               <div class="reflection-number">01 // KNOWLEDGE</div>
               <h3>Pembelajaran Utama</h3>
@@ -369,7 +380,7 @@
             <div class="reflection-card">
               <div class="reflection-number">02 // TRANSFORMATION</div>
               <h3>Perubahan Mindset</h3>
-              <p>Berubah dari pendekatan yang berpusat pada guru (*teacher-centered*) menjadi pembelajaran diferensiasi yang adaptif dan inklusif.</p>
+              <p>Berubah dari pendekatan yang berpusat pada guru (teacher-centered) menjadi pembelajaran diferensiasi yang adaptif dan inklusif.</p>
             </div>
 
             <div class="reflection-card">
@@ -381,7 +392,7 @@
             <div class="reflection-card">
               <div class="reflection-number">04 // COMMITMENT</div>
               <h3>Rencana Aksi</h3>
-              <p>Berkomitmen menjadi pendidik pembelajar sepanjang hayat (*lifelong learner*) yang terus berinovasi dan berkontribusi bagi dunia pendidikan.</p>
+              <p>Berkomitmen menjadi pendidik pembelajar sepanjang hayat (lifelong learner) yang terus berinovasi dan berkontribusi bagi dunia pendidikan.</p>
             </div>
           </div>
         </div>
@@ -389,16 +400,16 @@
 
       <!-- GALLERY SECTION -->
       <section id="galeri">
-        <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-          <div class="section-top reveal">
+        <div class="container reveal">
+          <div class="section-top">
             <div>
-              <div class="section-kicker">// 05. DOCUMENTATION</div>
-              <h2 class="section-title">VISUAL<br />LOGS</h2>
+              <div class="section-kicker">DOCUMENTATION</div>
+              <h2 class="section-title">VISUAL LOGS</h2>
             </div>
             <p class="section-description">Dokumentasi momen penting selama pelaksanaan perkuliahan dan praktik pengalaman lapangan.</p>
           </div>
 
-          <div class="gallery-grid reveal">
+          <div class="gallery-grid">
             <div class="gallery-item"><img src="images/Observasi-lingkungan.jpeg" alt="Observasi" /></div>
             <div class="gallery-item"><img src="images/praktik1.jpeg" alt="Praktik" /></div>
             <div class="gallery-item"><img src="images/evaluasi.jpeg" alt="Evaluasi" /></div>
@@ -411,108 +422,44 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="container" style="width: min(92%, var(--max-width)); margin: auto">
-        <div class="reveal">
-          <div class="footer-title">
-            KEEP<br />
-            <span style="color: var(--cyan-neon)">LEARNING.</span>
-          </div>
-
-          <div class="footer-social">
-            <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
-            <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
-            <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
-          </div>
+      <div class="container reveal">
+        <div class="footer-title">LET'S CREATE<br />SOMETHING EXTRAORDINARY</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+          <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
         </div>
-
-        <div class="footer-bottom">
-          <span>© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU</span>
-          <span>SEMINAR PENDIDIKAN UNY</span>
-        </div>
+        <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
       </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- MASTER APP SCRIPT & LOADER -->
+    <script src="js/app.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // 1. Inisialisasi Elemen
-        const loaderText = document.querySelector(".loader-text");
-        const preloader = document.getElementById("preloader");
-        const fullText = "SELAMAT DATANG DI E-PORTFOLIO SEMINAR PENDIDIKAN ILYAS FANDHI ANGGARA";
+      /* ===== LOADING SCREEN ===== */
+      (function () {
+        const overlay = document.getElementById("loaderOverlay");
+        const bar = document.getElementById("loaderBar");
+        const percent = document.getElementById("loaderPercent");
+        if (!overlay || !bar || !percent) return;
+        let prog = 0;
 
-        if (!loaderText || !preloader) return;
-
-        // Kosongkan teks awal
-        loaderText.textContent = "";
-        let charIndex = 0;
-
-        // 2. Fungsi Ketik
-        function typeWriter() {
-          if (charIndex < fullText.length) {
-            loaderText.textContent += fullText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeWriter, 35); // Kecepatan ketik (35ms per huruf)
-          } else {
-            // 3. Eksekusi Tutup Preloader HANYA saat teks sudah lengkap
-            setTimeout(() => {
-              preloader.classList.add("loaded");
-            }, 500); // Jeda 0.5 detik agar kalimat utuh sempat terbaca
+        const interval = setInterval(() => {
+          prog += Math.random() * 12 + 3;
+          if (prog >= 100) {
+            prog = 100;
           }
-        }
-
-        // Jalankan animasi ketik
-        typeWriter();
-      });
-
-      /* =====================================================
-        KODE UTILS LAIN (CURSOR, MOBILE MENU, REVEAL)
-      ===================================================== */
-      // Custom Cursor
-      const dot = document.getElementById("cursor-dot");
-      const outline = document.getElementById("cursor-outline");
-
-      if (window.matchMedia("(pointer: fine)").matches) {
-        window.addEventListener("mousemove", (e) => {
-          const posX = e.clientX;
-          const posY = e.clientY;
-          dot.style.left = `${posX}px`;
-          dot.style.top = `${posY}px`;
-          outline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 400, fill: "forwards" });
-        });
-
-        const interactives = document.querySelectorAll("a, button, .dark-card, .reflection-card, .material-item, .gallery-item");
-        interactives.forEach((el) => {
-          el.addEventListener("mouseenter", () => document.body.classList.add("hovering"));
-          el.addEventListener("mouseleave", () => document.body.classList.remove("hovering"));
-        });
-      }
-
-      // Mobile Menu
-      const menuButton = document.getElementById("menuButton");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileClose = document.getElementById("mobileClose");
-
-      if (menuButton && mobileMenu && mobileClose) {
-        menuButton.addEventListener("click", () => {
-          mobileMenu.classList.add("active");
-        });
-        mobileClose.addEventListener("click", () => {
-          mobileMenu.classList.remove("active");
-        });
-      }
-
-      // Reveal Animation
-      const reveals = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("active");
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      reveals.forEach((el) => observer.observe(el));
+          bar.style.width = prog + "%";
+          percent.textContent = Math.floor(prog) + "%";
+          if (prog >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+              overlay.classList.add("loader-hide");
+              setTimeout(() => (overlay.style.display = "none"), 700);
+            }, 350);
+          }
+        }, 70);
+      })();
     </script>
   </body>
 </html>
