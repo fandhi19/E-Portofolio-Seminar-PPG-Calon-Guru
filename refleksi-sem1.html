@@ -1216,6 +1216,11 @@
               </div>
             </div>
           </article>
+
+          <div class="article-navigation">
+            <button id="btn-sebelumnya" class="nav-btn"><i class="fa-solid fa-arrow-left"></i> Sebelumnya</button>
+            <button id="btn-selanjutnya" class="nav-btn">Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
         </div>
       </section>
     </main>
@@ -1253,7 +1258,7 @@
         <div class="footer-social">
           <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
           <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
-          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">E-PORTFOLIO PPL</a>
         </div>
         <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
       </div>
@@ -1322,6 +1327,66 @@
             pdfFallback.classList.add("show");
           });
         }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ambil elemen yang dibutuhkan
+        const panels = Array.from(document.querySelectorAll(".course-panel"));
+        const buttons = Array.from(document.querySelectorAll(".course-btn"));
+        const btnPrev = document.getElementById("btn-sebelumnya");
+        const btnNext = document.getElementById("btn-selanjutnya");
+        const sectionMataKuliah = document.getElementById("mata-kuliah");
+
+        let currentIndex = 0; // Index artikel yang pertama kali aktif
+
+        // Fungsi untuk mengupdate tampilan panel dan tombol navigasi
+        function updateNavigation(index) {
+          // 1. Hilangkan class 'active' dari semua panel dan tombol menu atas
+          panels.forEach((panel) => panel.classList.remove("active"));
+          buttons.forEach((btn) => btn.classList.remove("active"));
+
+          // 2. Tambahkan class 'active' ke panel dan tombol menu yang sedang dituju
+          if (panels[index] && buttons[index]) {
+            panels[index].classList.add("active");
+            buttons[index].classList.add("active");
+          }
+
+          // 3. Matikan tombol 'Sebelumnya' jika di artikel pertama,
+          //    dan matikan tombol 'Selanjutnya' jika di artikel terakhir
+          btnPrev.disabled = index === 0;
+          btnNext.disabled = index === panels.length - 1;
+        }
+
+        // Inisialisasi tampilan pertama kali
+        updateNavigation(currentIndex);
+
+        // Event saat tombol 'Sebelumnya' diklik
+        btnPrev.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateNavigation(currentIndex);
+            // Opsional: Gulir layar secara otomatis ke bagian atas artikel
+            sectionMataKuliah.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+
+        // Event saat tombol 'Selanjutnya' diklik
+        btnNext.addEventListener("click", function () {
+          if (currentIndex < panels.length - 1) {
+            currentIndex++;
+            updateNavigation(currentIndex);
+            // Opsional: Gulir layar secara otomatis ke bagian atas artikel
+            sectionMataKuliah.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+
+        // Sinkronisasi: Update index dan panel jika user mengklik tombol menu '.course-btn' secara langsung
+        buttons.forEach((btn, index) => {
+          btn.addEventListener("click", function () {
+            currentIndex = index;
+            updateNavigation(currentIndex);
+          });
+        });
       });
     </script>
   </body>

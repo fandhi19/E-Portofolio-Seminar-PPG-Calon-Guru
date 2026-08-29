@@ -1,285 +1,281 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Identitas | E-Portfolio Seminar Pendidikan</title>
+    <meta name="description" content="Identitas, visi pribadi, visi sebagai calon guru, dan langkah mewujudkan visi dalam pendidikan." />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Identitas | E-Portfolio Seminar Pendidikan</title>
-  <meta name="description" content="Identitas, visi pribadi, visi sebagai calon guru, dan langkah mewujudkan visi dalam pendidikan." />
+    <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
 
-  <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-<body>
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- BACKGROUND GLOW MESH & CANVAS -->
-  <div class="bg-wrapper">
-    <canvas id="bgCanvas" class="bg-canvas"></canvas>
-    <div class="bg-grid"></div>
-    <div class="glow-orb-container orb-container-1">
-      <div class="glow-orb orb-1"></div>
-    </div>
-    <div class="glow-orb-container orb-container-2">
-      <div class="glow-orb orb-2"></div>
-    </div>
-  </div>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="brand">
-        <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
-        <span>PORTFOLIO</span>
-      </a>
-
-      <nav class="nav-center">
-        <a href="identitas.html" class="active">IDENTITAS</a>
-        <a href="refleksi-sem1.html">SEMESTER 1</a>
-        <a href="refleksi-sem2.html">SEMESTER 2</a>
-      </nav>
-
-      <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
-          <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
-          <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
-          <span class="theme-label" id="themeLabel">LIGHT</span>
-        </button>
+    <!-- BACKGROUND GLOW MESH & CANVAS -->
+    <div class="bg-wrapper">
+      <canvas id="bgCanvas" class="bg-canvas"></canvas>
+      <div class="bg-grid"></div>
+      <div class="glow-orb-container orb-container-1">
+        <div class="glow-orb orb-1"></div>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- IDENTITY HERO -->
-    <section class="identity-hero" id="home">
-      <div class="container identity-hero-grid">
-        <div class="reveal">
-          <div class="identity-kicker">[ IDENTITAS / PERSONAL VISION ]</div>
-
-          <h1>
-            WHO I AM<br />
-            <span>AS A</span><br />
-            <span class="outline">FUTURE TEACHER</span>
-          </h1>
-
-          <p>Halaman ini merepresentasikan identitas, visi pribadi untuk pendidikan Indonesia, visi saya sebagai calon guru, serta langkah nyata yang ingin saya lakukan untuk mewujudkan visi tersebut.</p>
-
-          <div class="hero-quote">"Menjadi guru bukan hanya tentang menyampaikan ilmu, tetapi tentang menciptakan ruang belajar yang membuat murid merasa aman, berkembang, dan mampu menemukan potensi terbaiknya."</div>
-        </div>
-
-        <div class="identity-visual reveal">
-          <div class="visual-word">IDENTITY</div>
-          <img src="images/fototampan3.png" alt="Foto Ilyas Fandhi Anggara" class="identity-figure" />
-          <div class="hero-badge">
-            <strong>Ilyas Fandhi Anggara, S.Kom</strong>
-            <span>Mahasiswa PPG / Pendidikan Informatika</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MOVING MARQUEE -->
-    <div class="motion-marquee reveal" aria-hidden="true">
-      <div class="motion-track">
-        <span><b>01</b> QUALITY EDUCATION</span>
-        <span>COMMUNICATION <b>✦</b> INNOVATION <b>✦</b> CHARACTER</span>
-        <span><b>02</b> INDONESIA EMAS 2045</span>
-        <span>LEARNING <b>✦</b> GROWTH <b>✦</b> IMPACT</span>
-        <span><b>03</b> FUTURE TEACHER</span>
-        <span>RELEVANT <b>✦</b> CREATIVE <b>✦</b> HUMAN</span>
-        <span><b>01</b> QUALITY EDUCATION</span>
-        <span>COMMUNICATION <b>✦</b> INNOVATION <b>✦</b> CHARACTER</span>
-        <span><b>02</b> INDONESIA EMAS 2045</span>
-        <span>LEARNING <b>✦</b> GROWTH <b>✦</b> IMPACT</span>
+      <div class="glow-orb-container orb-container-2">
+        <div class="glow-orb orb-2"></div>
       </div>
     </div>
 
-    <!-- VISI UNTUK INDONESIA -->
-    <section id="visi">
-      <div class="container">
-        <div class="section-top reveal">
-          <div>
-            <div class="section-kicker">01 // PERSONAL VISION</div>
-            <h2 class="section-title">VISI UNTUK<br />INDONESIA</h2>
-          </div>
-          <p class="section-description">Pandangan pribadi saya mengenai pendidikan Indonesia dan ruang pendidikan yang ingin saya ikut bangun untuk generasi masa depan.</p>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
+          <span>PORTFOLIO</span>
+        </a>
+
+        <nav class="nav-center">
+          <a href="identitas.html" class="active">IDENTITAS</a>
+          <a href="refleksi-sem1.html">SEMESTER 1</a>
+          <a href="refleksi-sem2.html">SEMESTER 2</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+            <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+            <span class="theme-label" id="themeLabel">LIGHT</span>
+          </button>
         </div>
-
-        <div class="vision-grid">
-          <article class="vision-card reveal">
-            <div class="vision-number">VISION / 001</div>
-            <h3>Menciptakan Pendidikan yang Berkualitas.</h3>
-            <p>Untuk mewujudkan Indonesia Emas 2045, sebagai seorang guru saya harus menciptakan ruang pendidikan yang dapat mengembangkan potensi yang dimiliki murid secara optimal.</p>
-          </article>
-
-          <article class="vision-card reveal">
-            <div class="vision-number">VISION / 002</div>
-            <h3>Akademik + Karakter</h3>
-            <p>Pendidikan tidak hanya berfokus pada nilai akademis, tetapi juga menciptakan generasi yang berkarakter kuat, tangguh, bermoral, dan berakhlak mulia.</p>
-          </article>
-        </div>
-
-        <div class="quote-strip reveal">Pendidikan yang berkualitas bagi saya adalah pendidikan yang membuka ruang bagi setiap murid untuk tumbuh secara utuh — secara akademis, personal, sosial, dan moral.</div>
       </div>
-    </section>
+    </header>
 
-    <!-- VISI SEBAGAI GURU -->
-    <section id="guru">
-      <div class="container">
-        <div class="section-top reveal">
-          <div>
-            <div class="section-kicker">02 // FUTURE TEACHER</div>
-            <h2 class="section-title">VISI SAYA<br />SEBAGAI GURU</h2>
+    <main>
+      <!-- IDENTITY HERO -->
+      <section class="identity-hero" id="home">
+        <div class="container identity-hero-grid">
+          <div class="reveal">
+            <div class="identity-kicker">[ IDENTITAS / PERSONAL VISION ]</div>
+
+            <h1>
+              WHO I AM<br />
+              <span>AS A</span><br />
+              <span class="outline">FUTURE TEACHER</span>
+            </h1>
+
+            <p>Halaman ini merepresentasikan identitas, visi pribadi untuk pendidikan Indonesia, visi saya sebagai calon guru, serta langkah nyata yang ingin saya lakukan untuk mewujudkan visi tersebut.</p>
+
+            <div class="hero-quote">"Menjadi guru bukan hanya tentang menyampaikan ilmu, tetapi tentang menciptakan ruang belajar yang membuat murid merasa aman, berkembang, dan mampu menemukan potensi terbaiknya."</div>
           </div>
-          <p class="section-description">Gambaran tentang sosok guru yang ingin saya tumbuhkan melalui proses belajar, pengalaman PPG, dan praktik pembelajaran.</p>
+
+          <div class="identity-visual reveal">
+            <div class="visual-word">IDENTITY</div>
+            <img src="images/fototampan3.png" alt="Foto Ilyas Fandhi Anggara" class="identity-figure" />
+            <div class="hero-badge">
+              <strong>Ilyas Fandhi Anggara, S.Kom</strong>
+              <span>Mahasiswa PPG / Pendidikan Informatika</span>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="vision-grid">
-          <article class="vision-card reveal">
-            <div class="vision-number">TEACHER / 001</div>
-            <h3>Menjadi Guru yang Komunikatif.</h3>
-            <p>
-              Saya berkomitmen untuk melampaui guru yang hanya sekadar mentransfer ilmu, melainkan guru yang dapat membangun hubungan komunikasi yang baik, terbuka, mampu menjelaskan materi dengan mudah dipahami, dan membangun semangat
-              belajar anak.
-            </p>
-          </article>
-
-          <article class="vision-card reveal">
-            <div class="vision-number">TEACHER / 002</div>
-            <h3>Menjadi Guru yang Inovatif.</h3>
-            <p>Di tengah pesatnya era digital, saya bertekad untuk terus berinovasi dan menguasai perkembangan teknologi agar dapat menghadirkan pembelajaran yang relevan, kreatif, dan tidak tertinggal oleh zaman.</p>
-          </article>
+      <!-- MOVING MARQUEE -->
+      <div class="motion-marquee reveal" aria-hidden="true">
+        <div class="motion-track">
+          <span><b>01</b> QUALITY EDUCATION</span>
+          <span>COMMUNICATION <b>✦</b> INNOVATION <b>✦</b> CHARACTER</span>
+          <span><b>02</b> INDONESIA EMAS 2045</span>
+          <span>LEARNING <b>✦</b> GROWTH <b>✦</b> IMPACT</span>
+          <span><b>03</b> FUTURE TEACHER</span>
+          <span>RELEVANT <b>✦</b> CREATIVE <b>✦</b> HUMAN</span>
+          <span><b>01</b> QUALITY EDUCATION</span>
+          <span>COMMUNICATION <b>✦</b> INNOVATION <b>✦</b> CHARACTER</span>
+          <span><b>02</b> INDONESIA EMAS 2045</span>
+          <span>LEARNING <b>✦</b> GROWTH <b>✦</b> IMPACT</span>
         </div>
-
-        <div class="quote-strip reveal">Saya ingin memosisikan diri sebagai orang tua kedua yang memberikan rasa aman dan nyaman, sekaligus menjadi pendidik yang mampu membantu murid menemukan cara terbaik untuk belajar.</div>
       </div>
-    </section>
 
-    <!-- ACTION PLAN -->
-    <section id="aksi">
-      <div class="container">
-        <div class="section-top reveal">
-          <div>
-            <div class="section-kicker">03 // ACTION PLAN</div>
-            <h2 class="section-title">HOW WILL<br />I GET THERE?</h2>
-          </div>
-          <p class="section-description">Visi perlu diterjemahkan menjadi tindakan. Berikut langkah yang saya lakukan dan akan saya lanjutkan untuk mencapai visi sebagai calon guru.</p>
-        </div>
-
-        <div class="actions-layout">
-          <div class="actions-intro reveal">
-            <h3>FROM<br />VISION<br />TO ACTION.</h3>
-            <p>Saya melihat pengembangan diri sebagai proses berkelanjutan. Setiap tindakan kecil menjadi bagian dari perjalanan menuju guru yang komunikatif, inovatif, dan terus bertumbuh.</p>
+      <!-- VISI UNTUK INDONESIA -->
+      <section id="visi">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">01 // PERSONAL VISION</div>
+              <h2 class="section-title">VISI UNTUK<br />INDONESIA</h2>
+            </div>
+            <p class="section-description">Pandangan pribadi saya mengenai pendidikan Indonesia dan ruang pendidikan yang ingin saya ikut bangun untuk generasi masa depan.</p>
           </div>
 
-          <div class="action-list">
-            <article class="action-card reveal">
-              <div class="action-number">01</div>
-              <div>
-                <h4>Mengembangkan Kompetensi Diri</h4>
-                <p>
-                  Langkah pertama untuk mewujudkan visi adalah meningkatkan kompetensi diri sebagai seorang guru. Saat ini saya menjalaninya melalui PPG untuk menunjang kompetensi agar semakin baik dan sesuai dengan kriteria guru. Setelah
-                  menjadi guru, saya akan terus berkembang melalui pelatihan, seminar, dan komunitas guru.
-                </p>
-              </div>
-              <div class="action-arrow">→</div>
+          <div class="vision-grid">
+            <article class="vision-card reveal">
+              <div class="vision-number">VISION / 001</div>
+              <h3>Menciptakan Pendidikan yang Berkualitas.</h3>
+              <p>Untuk mewujudkan Indonesia Emas 2045, sebagai seorang guru saya harus menciptakan ruang pendidikan yang dapat mengembangkan potensi yang dimiliki murid secara optimal.</p>
             </article>
 
-            <article class="action-card reveal">
-              <div class="action-number">02</div>
-              <div>
-                <h4>Merancang Pembelajaran yang Inovatif</h4>
-                <p>
-                  Saya akan mengintegrasikan berbagai media dan teknologi dalam pembelajaran, merancang metode yang kreatif dan tidak monoton sehingga murid tidak mudah bosan, lebih bersemangat, dan memiliki motivasi belajar yang lebih
-                  baik.
-                </p>
-              </div>
-              <div class="action-arrow">→</div>
+            <article class="vision-card reveal">
+              <div class="vision-number">VISION / 002</div>
+              <h3>Akademik + Karakter</h3>
+              <p>Pendidikan tidak hanya berfokus pada nilai akademis, tetapi juga menciptakan generasi yang berkarakter kuat, tangguh, bermoral, dan berakhlak mulia.</p>
+            </article>
+          </div>
+
+          <div class="quote-strip reveal">Pendidikan yang berkualitas bagi saya adalah pendidikan yang membuka ruang bagi setiap murid untuk tumbuh secara utuh — secara akademis, personal, sosial, dan moral.</div>
+        </div>
+      </section>
+
+      <!-- VISI SEBAGAI GURU -->
+      <section id="guru">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">02 // FUTURE TEACHER</div>
+              <h2 class="section-title">VISI SAYA<br />SEBAGAI GURU</h2>
+            </div>
+            <p class="section-description">Gambaran tentang sosok guru yang ingin saya tumbuhkan melalui proses belajar, pengalaman PPG, dan praktik pembelajaran.</p>
+          </div>
+
+          <div class="vision-grid">
+            <article class="vision-card reveal">
+              <div class="vision-number">TEACHER / 001</div>
+              <h3>Menjadi Guru yang Komunikatif.</h3>
+              <p>
+                Saya berkomitmen untuk melampaui guru yang hanya sekadar mentransfer ilmu, melainkan guru yang dapat membangun hubungan komunikasi yang baik, terbuka, mampu menjelaskan materi dengan mudah dipahami, dan membangun semangat
+                belajar anak.
+              </p>
             </article>
 
-            <article class="action-card reveal">
-              <div class="action-number">03</div>
-              <div>
-                <h4>Membangun Komunikasi yang Baik</h4>
-                <p>Saya akan terus belajar membangun komunikasi dua arah yang baik dan nyaman dengan murid karena menurut saya salah satu hal paling penting dalam profesi guru adalah menjalin kedekatan dan komunikasi yang bermakna.</p>
-              </div>
-              <div class="action-arrow">→</div>
+            <article class="vision-card reveal">
+              <div class="vision-number">TEACHER / 002</div>
+              <h3>Menjadi Guru yang Inovatif.</h3>
+              <p>Di tengah pesatnya era digital, saya bertekad untuk terus berinovasi dan menguasai perkembangan teknologi agar dapat menghadirkan pembelajaran yang relevan, kreatif, dan tidak tertinggal oleh zaman.</p>
+            </article>
+          </div>
+
+          <div class="quote-strip reveal">Saya ingin memosisikan diri sebagai orang tua kedua yang memberikan rasa aman dan nyaman, sekaligus menjadi pendidik yang mampu membantu murid menemukan cara terbaik untuk belajar.</div>
+        </div>
+      </section>
+
+      <!-- ACTION PLAN -->
+      <section id="aksi">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">03 // ACTION PLAN</div>
+              <h2 class="section-title">HOW WILL<br />I GET THERE?</h2>
+            </div>
+            <p class="section-description">Visi perlu diterjemahkan menjadi tindakan. Berikut langkah yang saya lakukan dan akan saya lanjutkan untuk mencapai visi sebagai calon guru.</p>
+          </div>
+
+          <div class="actions-layout">
+            <div class="actions-intro reveal">
+              <h3>FROM<br />VISION<br />TO ACTION.</h3>
+              <p>Saya melihat pengembangan diri sebagai proses berkelanjutan. Setiap tindakan kecil menjadi bagian dari perjalanan menuju guru yang komunikatif, inovatif, dan terus bertumbuh.</p>
+            </div>
+
+            <div class="action-list">
+              <article class="action-card reveal">
+                <div class="action-number">01</div>
+                <div>
+                  <h4>Mengembangkan Kompetensi Diri</h4>
+                  <p>
+                    Langkah pertama untuk mewujudkan visi adalah meningkatkan kompetensi diri sebagai seorang guru. Saat ini saya menjalaninya melalui PPG untuk menunjang kompetensi agar semakin baik dan sesuai dengan kriteria guru. Setelah
+                    menjadi guru, saya akan terus berkembang melalui pelatihan, seminar, dan komunitas guru.
+                  </p>
+                </div>
+                <div class="action-arrow">→</div>
+              </article>
+
+              <article class="action-card reveal">
+                <div class="action-number">02</div>
+                <div>
+                  <h4>Merancang Pembelajaran yang Inovatif</h4>
+                  <p>
+                    Saya akan mengintegrasikan berbagai media dan teknologi dalam pembelajaran, merancang metode yang kreatif dan tidak monoton sehingga murid tidak mudah bosan, lebih bersemangat, dan memiliki motivasi belajar yang lebih
+                    baik.
+                  </p>
+                </div>
+                <div class="action-arrow">→</div>
+              </article>
+
+              <article class="action-card reveal">
+                <div class="action-number">03</div>
+                <div>
+                  <h4>Membangun Komunikasi yang Baik</h4>
+                  <p>Saya akan terus belajar membangun komunikasi dua arah yang baik dan nyaman dengan murid karena menurut saya salah satu hal paling penting dalam profesi guru adalah menjalin kedekatan dan komunikasi yang bermakna.</p>
+                </div>
+                <div class="action-arrow">→</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KOMITMEN -->
+      <section id="komitmen">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">04 // COMMITMENT</div>
+              <h2 class="section-title">THE TEACHER<br />I WANT TO BE</h2>
+            </div>
+            <p class="section-description">Tiga kata kunci yang saya jadikan arah dalam membangun identitas dan praktik saya sebagai calon guru.</p>
+          </div>
+
+          <div class="commitment-grid">
+            <article class="commitment-card reveal">
+              <span>01 / HUMAN</span>
+              <h4>Komunikatif</h4>
+              <p>Membangun komunikasi yang terbuka, dua arah, dan bermakna sehingga murid merasa didengar, dihargai, aman, dan nyaman untuk belajar.</p>
+            </article>
+
+            <article class="commitment-card reveal">
+              <span>02 / METHOD</span>
+              <h4>Inovatif</h4>
+              <p>Menciptakan pembelajaran yang kreatif, relevan dengan perkembangan zaman, dan memanfaatkan teknologi secara tepat.</p>
+            </article>
+
+            <article class="commitment-card reveal">
+              <span>03 / GROWTH</span>
+              <h4>Terus Bertumbuh</h4>
+              <p>Tidak berhenti belajar setelah menjadi guru, tetapi terus mengembangkan kompetensi melalui refleksi, pelatihan, seminar, dan pengalaman.</p>
             </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- KOMITMEN -->
-    <section id="komitmen">
-      <div class="container">
-        <div class="section-top reveal">
-          <div>
-            <div class="section-kicker">04 // COMMITMENT</div>
-            <h2 class="section-title">THE TEACHER<br />I WANT TO BE</h2>
-          </div>
-          <p class="section-description">Tiga kata kunci yang saya jadikan arah dalam membangun identitas dan praktik saya sebagai calon guru.</p>
+      <!-- CLOSING -->
+      <section class="closing">
+        <div class="container">
+          <div class="section-kicker reveal">05 // CLOSING STATEMENT</div>
+          <h2 class="closing-title reveal">TEACH<br /><span class="outline">WITH PURPOSE.</span></h2>
+          <p class="reveal">
+            Visi ini menjadi arah yang ingin saya bawa sepanjang perjalanan menjadi guru: menghadirkan pendidikan yang berkualitas, membangun hubungan yang manusiawi, dan terus berinovasi agar pembelajaran tetap relevan bagi generasi masa
+            depan.
+          </p>
         </div>
+      </section>
+    </main>
 
-        <div class="commitment-grid">
-          <article class="commitment-card reveal">
-            <span>01 / HUMAN</span>
-            <h4>Komunikatif</h4>
-            <p>Membangun komunikasi yang terbuka, dua arah, dan bermakna sehingga murid merasa didengar, dihargai, aman, dan nyaman untuk belajar.</p>
-          </article>
-
-          <article class="commitment-card reveal">
-            <span>02 / METHOD</span>
-            <h4>Inovatif</h4>
-            <p>Menciptakan pembelajaran yang kreatif, relevan dengan perkembangan zaman, dan memanfaatkan teknologi secara tepat.</p>
-          </article>
-
-          <article class="commitment-card reveal">
-            <span>03 / GROWTH</span>
-            <h4>Terus Bertumbuh</h4>
-            <p>Tidak berhenti belajar setelah menjadi guru, tetapi terus mengembangkan kompetensi melalui refleksi, pelatihan, seminar, dan pengalaman.</p>
-          </article>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container reveal">
+        <div class="footer-title">KEEP<br />LEARNING & GROWING</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+          <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">E-PORTFOLIO PPL</a>
         </div>
+        <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="container">
-        <div class="section-kicker reveal">05 // CLOSING STATEMENT</div>
-        <h2 class="closing-title reveal">TEACH<br /><span class="outline">WITH PURPOSE.</span></h2>
-        <p class="reveal">
-          Visi ini menjadi arah yang ingin saya bawa sepanjang perjalanan menjadi guru: menghadirkan pendidikan yang berkualitas, membangun hubungan yang manusiawi, dan terus berinovasi agar pembelajaran tetap relevan bagi generasi masa
-          depan.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container reveal">
-      <div class="footer-title">KEEP<br />LEARNING & GROWING</div>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
-        <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
-        <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">VERCEL PORTFOLIO</a>
-      </div>
-      <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
-    </div>
-  </footer>
-
-  <!-- MASTER APP SCRIPT -->
-  <script src="js/app.js"></script>
-</body>
-
+    <!-- MASTER APP SCRIPT -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
