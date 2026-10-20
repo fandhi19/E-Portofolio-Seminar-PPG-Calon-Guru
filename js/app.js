@@ -37,7 +37,7 @@
 
     if (initLight) {
       body.setAttribute('data-theme', 'light');
-      if (label) label.textContent = 'DARK';
+      if (label) label.textContent = 'GELAP';
     }
 
     if (btn) {
@@ -45,12 +45,12 @@
         const isLight = body.getAttribute('data-theme') === 'light';
         if (isLight) {
           body.removeAttribute('data-theme');
-          if (label) label.textContent = 'LIGHT';
+          if (label) label.textContent = 'TERANG';
           localStorage.setItem('portfolio-theme', 'dark');
           showToast('🌙 Mode Gelap diaktifkan');
         } else {
           body.setAttribute('data-theme', 'light');
-          if (label) label.textContent = 'DARK';
+          if (label) label.textContent = 'GELAP';
           localStorage.setItem('portfolio-theme', 'light');
           showToast('☀️ Mode Terang diaktifkan');
         }
@@ -97,7 +97,7 @@
     // Hover interactive state
     function attachCursorHovers() {
       const targets = document.querySelectorAll(
-        'a, button, input, .course-btn, .dark-card, .reflection-card, .artifact-card, .vision-card, .action-card, .commitment-card, .gallery-item, .hero-image-wrapper, .about-image, .identity-figure, .filter-chip'
+        'a, button, input, .course-btn, .dark-card, .reflection-card, .artifact-card, .vision-card, .action-card, .commitment-card, .gallery-item, .hero-image-wrapper, .about-image, .identity-figure, .filter-chip, .karya-card, .karya-btn'
       );
 
       targets.forEach((el) => {
@@ -120,7 +120,7 @@
   /* ==================== 4. CARD SPOTLIGHT & 3D TILT EFFECT ==================== */
   function initSpotlightAndTilt() {
     const cards = document.querySelectorAll(
-      '.dark-card, .reflection-card, .vision-card, .action-card, .commitment-card, .artifact-card, .hero-code-card, .info-item, .journey-process-item, .hero-image-wrapper, .about-image, .identity-figure'
+      '.dark-card, .reflection-card, .vision-card, .action-card, .commitment-card, .artifact-card, .hero-code-card, .info-item, .journey-process-item, .hero-image-wrapper, .about-image, .identity-figure, .karya-card, .karya-stat-box'
     );
 
     cards.forEach((card) => {

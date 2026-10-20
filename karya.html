@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karya & Inovasi | E-Portofolio Seminar Pendidikan</title>
+    <meta name="description" content="Karya, artefak unggulan, inovasi media pembelajaran, dan produk teknologi pendidikan - Ilyas Fandhi Anggara, PPG Calon Guru UNY." />
+
+    <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- BACKGROUND GLOW MESH & CANVAS -->
+    <div class="bg-wrapper">
+      <canvas id="bgCanvas" class="bg-canvas"></canvas>
+      <div class="bg-grid"></div>
+      <div class="glow-orb-container orb-container-1">
+        <div class="glow-orb orb-1"></div>
+      </div>
+      <div class="glow-orb-container orb-container-2">
+        <div class="glow-orb orb-2"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
+          <span>PORTOFOLIO</span>
+        </a>
+
+        <nav class="nav-center">
+          <a href="identitas.html">VISI PRIBADI</a>
+          <a href="refleksi-sem1.html">SEMESTER 1</a>
+          <a href="refleksi-sem2.html">SEMESTER 2</a>
+          <a href="karya.html" class="active">KARYA INOVASI</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+            <span class="theme-label" id="themeLabel">TERANG</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="identity-hero" id="home">
+        <div class="container identity-hero-grid">
+          <div class="reveal">
+            <div class="identity-kicker">[ PRODUK & INOVASI PEMBELAJARAN ]</div>
+            <h1>
+              KARYA INOVATIF<br />
+              <span>TEKNOLOGI &</span><br />
+              <span class="outline">PEMBELAJARAN</span>
+            </h1>
+            <p>
+              Etalase dokumentasi karya inovatif, media pembelajaran digital interaktif, modul ajar berbasis TPACK, serta instrumen pembelajaran bermakna yang dirancang selama menempuh perkuliahan PPG Calon Guru Bidang Studi Pendidikan Informatika di Universitas Negeri Yogyakarta.
+            </p>
+          </div>
+
+          <div class="identity-visual reveal">
+            <div class="visual-word">KARYA</div>
+            <div class="hero-code-card">
+              <div class="label">Pendidikan Informatika / Inovasi 2026</div>
+              <h3>Dari ide konseptual, menjadi karya aplikatif.</h3>
+              <p>Membuktikan kemampuan pedagogik dan penguasaan teknologi melalui produk pembelajaran yang relevan, adaptif, dan berpusat pada peserta didik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOVING MARQUEE -->
+      <div class="motion-marquee reveal" aria-hidden="true">
+        <div class="motion-track">
+          <span><b>01</b> KARYA INOVATIF</span>
+          <span>MEDIA DIGITAL <b>✦</b> TPACK <b>✦</b> INFORMATIKA UNY</span>
+          <span><b>02</b> PEMBELAJARAN BERMAKNA</span>
+          <span>DEEP LEARNING <b>✦</b> ASESMEN <b>✦</b> DAMPAK NYATA</span>
+          <span><b>03</b> PENDIDIK MASA DEPAN</span>
+          <span>KREATIF <b>✦</b> SOLUTIF <b>✦</b> BERKELANJUTAN</span>
+          <span><b>01</b> KARYA INOVATIF</span>
+          <span>MEDIA DIGITAL <b>✦</b> TPACK <b>✦</b> INFORMATIKA UNY</span>
+          <span><b>02</b> PEMBELAJARAN BERMAKNA</span>
+          <span>DEEP LEARNING <b>✦</b> ASESMEN <b>✦</b> DAMPAK NYATA</span>
+        </div>
+      </div>
+
+      <!-- STATISTIK KARYA -->
+      <section class="content-section" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="container reveal">
+          <div class="karya-stats-strip">
+            <div class="karya-stat-box">
+              <div class="karya-stat-num">06+</div>
+              <div class="karya-stat-label">Produk & Dokumen Inovasi</div>
+            </div>
+            <div class="karya-stat-box">
+              <div class="karya-stat-num">100%</div>
+              <div class="karya-stat-label">Berpusat pada Peserta Didik</div>
+            </div>
+            <div class="karya-stat-box">
+              <div class="karya-stat-num">TPACK</div>
+              <div class="karya-stat-label">Integrasi Pedagogik & Teknologi</div>
+            </div>
+            <div class="karya-stat-box">
+              <div class="karya-stat-num">PPL</div>
+              <div class="karya-stat-label">Diuji Coba pada Praktik Nyata</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOWCASE KARYA -->
+      <section class="content-section" id="daftar-karya">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">01 // ETALASE KARYA</div>
+              <h2 class="section-title">PRODUK INOVASI<br /><span class="yellow">PEMBELAJARAN.</span></h2>
+            </div>
+            <p class="section-description">Jelajahi berbagai karya, modul ajar, dan media digital yang dikembangkan untuk mendukung ekosistem belajar yang interaktif.</p>
+          </div>
+
+          <!-- INTERACTIVE FILTER & SEARCH BAR -->
+          <div class="materials-filter-bar reveal">
+            <div class="materials-search-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="karyaSearch" class="materials-search-input" placeholder="Cari karya, topik, atau kata kunci..." />
+            </div>
+            <div class="filter-chips" id="karyaFilterChips">
+              <button type="button" class="filter-chip active" data-filter="all">Semua</button>
+              <button type="button" class="filter-chip" data-filter="web">Media Digital & Web</button>
+              <button type="button" class="filter-chip" data-filter="modul">Modul & Perangkat Ajar</button>
+              <button type="button" class="filter-chip" data-filter="asesmen">Asesmen & Instrumen</button>
+              <button type="button" class="filter-chip" data-filter="projek">Projek & Kepemimpinan</button>
+            </div>
+          </div>
+
+          <!-- KARYA GRID -->
+          <div class="karya-grid" id="karyaContainer">
+            
+            <!-- KARYA 1: E-PORTOFOLIO WEB -->
+            <article class="karya-card reveal" data-category="web">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-globe"></i> Media Digital & Web</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">E-Portofolio Seminar Pendidikan Interaktif</h3>
+                <p class="karya-desc">
+                  Platform website portofolio akademik futuristik yang dirancang dan dikembangkan secara mandiri menggunakan teknologi web modern. Memuat dokumentasi refleksi kritis dua semester, filosofi pendidikan, modul perkuliahan, dan artefak pembelajaran dengan antarmuka dinamis, mode terang/gelap, serta penampil dokumen PDF langsung.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">HTML5 / CSS3 Modern</span>
+                  <span class="karya-tag-item">Vanilla JavaScript</span>
+                  <span class="karya-tag-item">Canvas Animation</span>
+                  <span class="karya-tag-item">Responsive Design</span>
+                  <span class="karya-tag-item">Bilingual Theme</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <a href="index.html" class="karya-btn primary"><i class="fa-solid fa-house"></i> Halaman Utama ↗</a>
+                <a href="identitas.html" class="karya-btn"><i class="fa-solid fa-compass"></i> Visi Pribadi</a>
+              </div>
+            </article>
+
+            <!-- KARYA 2: E-PORTOFOLIO PPL VERCEL -->
+            <article class="karya-card reveal" data-category="web">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-laptop-code"></i> Media Digital & Web</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">Platform Portofolio Digital PPL Terbimbing & Mandiri</h3>
+                <p class="karya-desc">
+                  Situs web khusus yang dideploy di Vercel untuk mendokumentasikan rekam jejak Praktik Pengalaman Lapangan (PPL). Memuat perangkat pembelajaran harian, modul ajar, rekaman video praktik mengajar, lembar observasi karakteristik murid, dan evaluasi berkala bersama guru pamong serta dosen pembimbing lapangan.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">Live Web on Vercel</span>
+                  <span class="karya-tag-item">Dokumentasi Praktik PPL</span>
+                  <span class="karya-tag-item">Jurnal Reflektif</span>
+                  <span class="karya-tag-item">Video Praktik</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank" rel="noopener noreferrer" class="karya-btn primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Website PPL ↗</a>
+                <a href="refleksi-sem1.html" class="karya-btn"><i class="fa-solid fa-book-open"></i> Refleksi PPL</a>
+              </div>
+            </article>
+
+            <!-- KARYA 3: MODUL PEMBELAJARAN KREATIF & INOVATIF -->
+            <article class="karya-card reveal" data-category="modul">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-lightbulb"></i> Modul & Perangkat Ajar</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">Rancangan Pembelajaran Kreatif & Inovatif Informatika</h3>
+                <p class="karya-desc">
+                  Modul ajar Kurikulum Merdeka yang dirancang untuk mengatasi kejenuhan belajar murid melalui penerapan model Project-Based Learning (PjBL) berbantuan media interaktif. Mengintegrasikan literasi digital, computational thinking, dan kolaborasi kelompok berbasis masalah kontekstual.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">Kurikulum Merdeka</span>
+                  <span class="karya-tag-item">PjBL & Kolaborasi</span>
+                  <span class="karya-tag-item">Informatika Abad 21</span>
+                  <span class="karya-tag-item">Computational Thinking</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <button type="button" class="karya-btn primary" onclick="openDocument('dokumen/hasil/LEMBAR KERJA 2 Pembelajaran Kreatif dan Inovatif.pdf', 'Modul LK Pembelajaran Kreatif Inovatif')">
+                  <i class="fa-solid fa-file-pdf"></i> Pratinjau LK 2 ↗
+                </button>
+                <button type="button" class="karya-btn" onclick="openDocument('dokumen/Dokumen PKI.pdf', 'Dokumen Pendukung PKI')">
+                  <i class="fa-solid fa-file-lines"></i> Dokumen PKI ↗
+                </button>
+              </div>
+            </article>
+
+            <!-- KARYA 4: PEMBELAJARAN MENDALAM & ASESMEN DIAGNOSTIK -->
+            <article class="karya-card reveal" data-category="asesmen">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-chart-pie"></i> Asesmen & Instrumen</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">Instrumen Asesmen Diagnostik & Pembelajaran Mendalam</h3>
+                <p class="karya-desc">
+                  Instrumen pemetaan gaya belajar dan asesmen awal diagnostik yang memfasilitasi penerapan pembelajaran mendalam (Deep Learning). Membantu guru mendeteksi kesiapan belajar peserta didik serta merancang diferensiasi konten, proses, dan produk secara tepat sasaran.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">Asesmen Diagnostik</span>
+                  <span class="karya-tag-item">Deep Learning</span>
+                  <span class="karya-tag-item">Diferensiasi Pembelajaran</span>
+                  <span class="karya-tag-item">Evaluasi Berkelanjutan</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <button type="button" class="karya-btn primary" onclick="openDocument('dokumen/hasil/LEMBAR KERJA 2 Pembelajaran Mendalam dan Asesmen Dasar.pdf', 'LK Pembelajaran Mendalam & Asesmen Dasar')">
+                  <i class="fa-solid fa-file-pdf"></i> Pratinjau LK Asesmen ↗
+                </button>
+                <button type="button" class="karya-btn" onclick="openDocument('dokumen/Dokumen PMA 1.pdf', 'Dokumen PMA Bagian 1')">
+                  <i class="fa-solid fa-file-lines"></i> Dokumen PMA ↗
+                </button>
+              </div>
+            </article>
+
+            <!-- KARYA 5: GROWTH MINDSET TOOLKIT -->
+            <article class="karya-card reveal" data-category="modul">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-brain"></i> Modul & Perangkat Ajar</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">Panduan Intervensi Pola Pikir Bertumbuh (Growth Mindset)</h3>
+                <p class="karya-desc">
+                  Perangkat intervensi pedagogik bertajuk "Dari 'Aduh Saya Gagal' ke 'Saya Bisa!'", ditujukan untuk melatih resiliensi murid saat menghadapi materi coding dan pemecahan masalah yang kompleks. Membimbing murid meredefinisi kesalahan sebagai jembatan penting dalam proses belajar.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">Growth Mindset</span>
+                  <span class="karya-tag-item">Resiliensi Akademik</span>
+                  <span class="karya-tag-item">Umpan Balik Positif</span>
+                  <span class="karya-tag-item">Panduan Intervensi</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <button type="button" class="karya-btn primary" onclick="openDocument('dokumen/hasil/LEMBAR KERJA 2 Growth Mindset.pdf', 'LK 2 Pola Berpikir Bertumbuh')">
+                  <i class="fa-solid fa-file-pdf"></i> Pratinjau LK Growth Mindset ↗
+                </button>
+                <button type="button" class="karya-btn" onclick="openDocument('dokumen/Dokumen GM 1.pdf', 'Dokumen Growth Mindset 1')">
+                  <i class="fa-solid fa-file-lines"></i> Dokumen GM ↗
+                </button>
+              </div>
+            </article>
+
+            <!-- KARYA 6: PROJEK KEPEMIMPINAN -->
+            <article class="karya-card reveal" data-category="projek">
+              <div>
+                <div class="karya-top">
+                  <span class="karya-badge"><i class="fa-solid fa-users-gear"></i> Projek & Kepemimpinan</span>
+                  <span class="karya-year">2026</span>
+                </div>
+                <h3 class="karya-title">Inisiatif Kolaboratif Projek Kepemimpinan di Sekolah</h3>
+                <p class="karya-desc">
+                  Rancangan projek kepemimpinan sosial dan pendidikan yang melibatkan kolaborasi lintas rekan mahasiswa, guru, dan peserta didik di sekolah mitra. Berfokus pada pengembangan iklim kelas yang inklusif, kepedulian sosial, serta pembiasaan karakter profil pelajar Pancasila.
+                </p>
+                <div class="karya-tags">
+                  <span class="karya-tag-item">Kepemimpinan Pelayanan</span>
+                  <span class="karya-tag-item">Kolaborasi Tim</span>
+                  <span class="karya-tag-item">Profil Pelajar Pancasila</span>
+                  <span class="karya-tag-item">Pemberdayaan Komunitas</span>
+                </div>
+              </div>
+              <div class="karya-footer">
+                <a href="refleksi-sem2.html" class="karya-btn primary"><i class="fa-solid fa-eye"></i> Refleksi Semester 2 ↗</a>
+                <a href="identitas.html#komitmen" class="karya-btn"><i class="fa-solid fa-handshake"></i> Komitmen Pendidik</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PRINSIP PENGEMBANGAN KARYA -->
+      <section class="content-section" style="padding-top: 60px;">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">02 // PRINSIP PENGEMBANGAN</div>
+              <h2 class="section-title">LANDASAN KARYA<br />& INOVASI</h2>
+            </div>
+            <p class="section-description">Tiga pilar utama yang mendasari setiap penciptaan karya dan media pembelajaran yang saya hasilkan.</p>
+          </div>
+
+          <div class="commitment-grid">
+            <article class="commitment-card reveal">
+              <span>01 / PEDAGOGIS</span>
+              <h4>Bermakna & Humanis</h4>
+              <p>Setiap teknologi dan media yang dibuat harus menempatkan manusia (murid dan guru) sebagai pusat, bukan sekadar menggunakan alat canggih tanpa tujuan pembelajaran yang jelas.</p>
+            </article>
+
+            <article class="commitment-card reveal">
+              <span>02 / TEKNOLOGIS</span>
+              <h4>Adaptif & Relevan</h4>
+              <p>Mengintegrasikan kemajuan komputasi, web, dan media digital sesuai dengan kodrat zaman abad ke-21 serta karakteristik generasi masa kini.</p>
+            </article>
+
+            <article class="commitment-card reveal">
+              <span>03 / REFLEKTIF</span>
+              <h4>Evaluatif & Bertumbuh</h4>
+              <p>Setiap karya yang diimplementasikan selalu dievaluasi melalui refleksi pengalaman empiris untuk perbaikan berkelanjutan secara konsisten.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PDF MODAL -->
+    <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfTitle">
+      <div class="pdf-modal-backdrop" onclick="closeDocument()"></div>
+      <div class="pdf-viewer">
+        <div class="pdf-header">
+          <div class="pdf-header-meta">
+            <div class="pdf-label">Artefak Pembelajaran / Pratinjau Dokumen</div>
+            <h3 class="pdf-title" id="pdfTitle">Pratinjau Dokumen</h3>
+          </div>
+          <div class="pdf-actions">
+            <a href="#" target="_blank" rel="noopener noreferrer" id="pdfExternal" class="pdf-open">Buka di Tab Baru ↗</a>
+            <button type="button" class="pdf-close" id="pdfClose" aria-label="Tutup dokumen">×</button>
+          </div>
+        </div>
+        <div class="pdf-container">
+          <iframe id="pdfFrame" src="" title="Penampil Dokumen PDF" loading="lazy"></iframe>
+          <div class="pdf-fallback" id="pdfFallback">
+            <div class="pdf-fallback-inner">
+              <strong>PDF</strong>
+              <p>Browser tidak menampilkan PDF secara langsung pada mode ini. Gunakan tombol <b>Buka di Tab Baru</b> di bagian atas untuk melihat dokumen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container reveal">
+        <div class="footer-title">MARI BERKARYA<br />& MENGINSPIRASI</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+          <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">E-PORTOFOLIO PPL</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">© 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNY</p>
+      </div>
+    </footer>
+
+    <!-- MASTER APP SCRIPT -->
+    <script src="js/app.js"></script>
+
+    <!-- PAGE SPECIFIC: FILTER & SEARCH KARYA + PDF MODAL VIEWER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // PDF Viewer Modal
+        const pdfModal = document.getElementById("pdfModal");
+        const pdfFrame = document.getElementById("pdfFrame");
+        const pdfTitle = document.getElementById("pdfTitle");
+        const pdfExternal = document.getElementById("pdfExternal");
+        const pdfClose = document.getElementById("pdfClose");
+        const pdfFallback = document.getElementById("pdfFallback");
+        let lastFocusedElement = null;
+
+        window.openDocument = function (file, title) {
+          lastFocusedElement = document.activeElement;
+          pdfTitle.textContent = title || "Pratinjau Dokumen";
+          pdfExternal.href = file;
+          pdfFallback.classList.remove("show");
+          pdfFrame.style.display = "block";
+          pdfFrame.src = file;
+          pdfModal.classList.add("active");
+          pdfModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          setTimeout(() => pdfClose.focus(), 30);
+        };
+
+        window.closeDocument = function () {
+          pdfModal.classList.remove("active");
+          pdfModal.setAttribute("aria-hidden", "true");
+          pdfFrame.src = "";
+          document.body.style.overflow = "";
+          if (lastFocusedElement) lastFocusedElement.focus();
+        };
+
+        if (pdfClose) pdfClose.addEventListener("click", closeDocument);
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && pdfModal && pdfModal.classList.contains("active")) closeDocument();
+        });
+        if (pdfFrame) {
+          pdfFrame.addEventListener("error", () => {
+            pdfFrame.style.display = "none";
+            pdfFallback.classList.add("show");
+          });
+        }
+
+        // Interactive Filter & Search
+        const searchInput = document.getElementById("karyaSearch");
+        const filterChips = document.querySelectorAll("#karyaFilterChips .filter-chip");
+        const cards = document.querySelectorAll(".karya-card");
+
+        let activeFilter = "all";
+        let searchQuery = "";
+
+        function filterCards() {
+          cards.forEach((card) => {
+            const category = card.dataset.category || "";
+            const text = card.textContent.toLowerCase();
+
+            const matchesCategory = activeFilter === "all" || category === activeFilter;
+            const matchesSearch = !searchQuery || text.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            filterCards();
+          });
+        }
+
+        filterChips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            filterChips.forEach((c) => c.classList.remove("active"));
+            chip.classList.add("active");
+            activeFilter = chip.dataset.filter || "all";
+            filterCards();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
