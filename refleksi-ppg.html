@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refleksi Perkuliahan PPG | E-Portofolio Seminar Pendidikan</title>
+    <meta name="description" content="Refleksi Menyeluruh Pengalaman Belajar Selama Mengikuti Program PPG Calon Guru - Ilyas Fandhi Anggara." />
+
+    <link rel="shortcut icon" href="images/Logo Uny outlitne.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- BACKGROUND GLOW MESH & CANVAS -->
+    <div class="bg-wrapper">
+      <canvas id="bgCanvas" class="bg-canvas"></canvas>
+      <div class="bg-grid"></div>
+      <div class="glow-orb-container orb-container-1">
+        <div class="glow-orb orb-1"></div>
+      </div>
+      <div class="glow-orb-container orb-container-2">
+        <div class="glow-orb orb-2"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="images/Logo Uny outlitne.png" alt="Logo UNY" class="brand-logo" />
+          <span>PORTOFOLIO</span>
+        </a>
+
+        <nav class="nav-center">
+          <a href="identitas.html">VISI PRIBADI</a>
+          <a href="refleksi-sem1.html">SEMESTER 1</a>
+          <a href="refleksi-sem2.html">SEMESTER 2</a>
+          <a href="refleksi-ppg.html" class="active">REFLEKSI PPG</a>
+          <a href="karya.html">KARYA INOVATIF</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <i class="fa-solid fa-moon theme-icon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon-light"></i>
+            <span class="theme-label" id="themeLabel">TERANG</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="identity-hero" id="home">
+        <div class="container identity-hero-grid">
+          <div class="reveal">
+            <div class="identity-kicker">[ LEMBAR KERJA 3 / REFLEKSI MENYELURUH PERKULIAHAN PPG ]</div>
+            <h1>
+              REFLEKSI<br />
+              <span>AKHIR PPG.</span><br />
+              <span class="outline">TRANSFORMASI GURU.</span>
+            </h1>
+            <p>
+              Dokumentasi refleksi menyeluruh pengalaman belajar selama menempuh Program Pendidikan Profesi Guru (PPG) Calon Guru di Universitas Negeri Yogyakarta. Mengintegrasikan visi ideal pendidikan di Indonesia, penguasaan empat pilar kompetensi guru profesional, serta rencana tindak lanjut konkret dalam mengawali karier pendidik masa depan.
+            </p>
+
+            <div class="hero-actions" style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+              <a href="#refleksi-filosofis" class="btn btn-primary">
+                <i class="fa-solid fa-compass"></i> Jelajahi Refleksi
+              </a>
+              <a href="#kompetensi-profesional" class="btn btn-outline">
+                <i class="fa-solid fa-award"></i> 4 Kompetensi Guru
+              </a>
+              <a href="#dokumen-asli" class="btn btn-outline">
+                <i class="fa-solid fa-file-lines"></i> Pratinjau Dokumen LK 3
+              </a>
+            </div>
+
+            <div class="meta-pills-wrap" style="display: flex; gap: 10px; margin-top: 25px; flex-wrap: wrap;">
+              <span class="meta-pill"><i class="fa-solid fa-user"></i> Ilyas Fandhi Anggara</span>
+              <span class="meta-pill"><i class="fa-solid fa-id-badge"></i> NIM: 25105260439</span>
+              <span class="meta-pill"><i class="fa-solid fa-laptop-code"></i> Bidang Studi Informatika</span>
+              <span class="meta-pill"><i class="fa-solid fa-certificate"></i> PPG Calon Guru Gel. 1 2024</span>
+            </div>
+          </div>
+
+          <div class="identity-visual reveal">
+            <div class="visual-word">SINTESIS</div>
+            <div class="hero-code-card">
+              <div class="label">LK 3 Seminar Pendidikan / Kulminasi Reflektif</div>
+              <h3>Dari Pemahaman, Menjadi Pendidik Profesional Berkelanjutan.</h3>
+              <p>
+                "Pendidikan bukan sekadar transfer materi satu arah atau mengejar angka akademik di atas kertas, melainkan membangun ekosistem belajar yang berkesadaran, bermakna, dan menggembirakan bagi seluruh warga sekolah."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== MOVING MARQUEE ==================== -->
+      <div class="motion-marquee reveal" aria-hidden="true">
+        <div class="motion-track">
+          <span><b>01</b> TRANSFORMASI PENDIDIKAN</span>
+          <span>STUDENT-CENTERED <b>✦</b> PEMBELAJARAN MENDALAM <b>✦</b> SOSIAL EMOSIONAL</span>
+          <span><b>02</b> EMPAT KOMPETENSI GURU</span>
+          <span>PEDAGOGIK <b>✦</b> KEPRIBADIAN <b>✦</b> PROFESIONAL <b>✦</b> SOSIAL</span>
+          <span><b>03</b> RENCANA TINDAK LANJUT</span>
+          <span>OBSERVASI KARAKTERISTIK <b>✦</b> ASESMEN AUTENTIK <b>✦</b> BUDAYA POSITIF</span>
+          <span><b>01</b> TRANSFORMASI PENDIDIKAN</span>
+          <span>STUDENT-CENTERED <b>✦</b> PEMBELAJARAN MENDALAM <b>✦</b> SOSIAL EMOSIONAL</span>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 1: REFLEKSI FILOSOFIS ==================== -->
+      <section class="content-section" id="refleksi-filosofis">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">INDIKATOR 1.1 // VISI PENDIDIKAN NASIONAL</div>
+              <h2 class="section-title">BAGAIMANA SEHARUSNYA<br />PENDIDIKAN <span class="yellow">DI INDONESIA?</span></h2>
+            </div>
+            <div style="max-width: 520px;">
+              <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 8px;">Pertanyaan Panduan LK 3 (Poin 1):</p>
+              <p class="section-description">"Setelah mengikuti rangkaian refleksi pengalaman belajar, menurut anda, bagaimana seharusnya pendidikan di Indonesia?"</p>
+            </div>
+          </div>
+
+          <!-- HIGHLIGHT CALLOUT BOX -->
+          <div class="callout-highlight reveal">
+            <div class="callout-badge">
+              <i class="fa-solid fa-quote-left"></i> Sintesis Filosofis Refleksi PPG
+            </div>
+            <p class="callout-text">
+              Setelah mengikuti seluruh rangkaian perkuliahan dan refleksi pengalaman belajar selama PPG, saya menyadari bahwa pendidikan di Indonesia <strong>seharusnya tidak lagi berfokus pada transfer materi satu arah atau sekadar mengejar ketuntasan nilai akademik di atas kertas</strong>. Pendidikan di Indonesia harus bertransformasi menjadi ekosistem belajar yang berpusat pada peserta didik (<em>student-centered</em>), memerdekakan, dan menerapkan prinsip pembelajaran mendalam (<strong>Berkesadaran, Bermakna, dan Menggembirakan</strong>).
+            </p>
+            <div class="callout-meta">
+              <span class="callout-tag"><i class="fa-solid fa-check"></i> Ekosistem Berpusat pada Murid</span>
+              <span class="callout-tag"><i class="fa-solid fa-check"></i> Pembelajaran Mendalam (Deep Learning)</span>
+              <span class="callout-tag"><i class="fa-solid fa-check"></i> Kesejahteraan Psikologis & Emosional</span>
+              <span class="callout-tag"><i class="fa-solid fa-check"></i> Desain Universal untuk Pembelajaran (DUP)</span>
+            </div>
+          </div>
+
+          <!-- 4 PILAR PENDIDIKAN MASA DEPAN -->
+          <div class="pillar-grid">
+            <!-- PILAR 1 -->
+            <div class="pillar-card reveal">
+              <div class="pillar-icon-wrap">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="pillar-num">PILAR 01 // PARADIGMA BELAJAR</div>
+              <h3 class="pillar-title">Ekosistem Belajar Berpusat pada Murid & Deep Learning</h3>
+              <p class="pillar-desc">
+                Pendidikan harus menggeser fokus dari pengajaran pasif menjadi fasilitasi aktif. Pembelajaran mendalam menuntut tiga pilar utama: <strong>Berkesadaran</strong> (menyadari pentingnya apa yang dipelajari), <strong>Bermakna</strong> (mengaitkan teori dengan kehidupan nyata), dan <strong>Menggembirakan</strong> (menghadirkan antusiasme belajar yang menyenangkan tanpa tekanan berlebih).
+              </p>
+            </div>
+
+            <!-- PILAR 2 -->
+            <div class="pillar-card reveal">
+              <div class="pillar-icon-wrap">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <div class="pillar-num">PILAR 02 // IKLIM SOSIAL-EMOSIONAL</div>
+              <h3 class="pillar-title">Kesejahteraan Psikologis & Ruang Belajar yang Aman</h3>
+              <p class="pillar-desc">
+                Pendidikan yang ideal harus memperhatikan kondisi psikologis dan emosional seluruh warga sekolah, baik murid maupun guru. Sekolah harus mampu menciptakan ruang belajar yang aman dan nyaman, di mana guru mampu mengelola emosinya secara stabil, menumbuhkan kesadaran diri, serta memupuk empati dan relasi interpersonal yang positif.
+              </p>
+            </div>
+
+            <!-- PILAR 3 -->
+            <div class="pillar-card reveal">
+              <div class="pillar-icon-wrap">
+                <i class="fa-solid fa-users-viewfinder"></i>
+              </div>
+              <div class="pillar-num">PILAR 03 // KEBERAGAMAN & DIFERENSIASI</div>
+              <h3 class="pillar-title">Mengakomodasi Keberagaman Tanpa Diskriminasi</h3>
+              <p class="pillar-desc">
+                Peserta didik hadir di ruang kelas dengan latar belakang kesiapan belajar, minat, profil kecerdasan, dan kondisi sosio-kultural yang majemuk. Pendidikan di Indonesia harus mampu melayani dan memfasilitasi setiap keunikan tersebut melalui pembelajaran berdiferensiasi yang adil, inklusif, dan bebas dari diskriminasi perlakuan.
+              </p>
+            </div>
+
+            <!-- PILAR 4 -->
+            <div class="pillar-card reveal">
+              <div class="pillar-icon-wrap">
+                <i class="fa-solid fa-clipboard-check"></i>
+              </div>
+              <div class="pillar-num">PILAR 04 // ASESMEN AUTENTIK DUP</div>
+              <h3 class="pillar-title">Asesmen Fleksibel Berbasis Desain Universal (DUP)</h3>
+              <p class="pillar-desc">
+                Asesmen tidak boleh hanya terpaku pada satu instrumen tes tertulis di akhir pembelajaran. Penilaian wajib diawali oleh asesmen awal/diagnostik (kognitif dan non-kognitif) yang akurat menggunakan prinsip Desain Universal untuk Pembelajaran (DUP), sehingga setiap murid memperoleh ruang untuk mengekspresikan pemahamannya melalui berbagai modalitas yang beragam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 2: 4 KOMPETENSI GURU PROFESIONAL ==================== -->
+      <section class="content-section" id="kompetensi-profesional" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">INDIKATOR 1.2 // PROFIL PENDIDIK MASA DEPAN</div>
+              <h2 class="section-title">MENJADI GURU<br /><span class="yellow">PROFESIONAL.</span></h2>
+            </div>
+            <div style="max-width: 520px;">
+              <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 8px;">Pertanyaan Panduan LK 3 (Poin 2):</p>
+              <p class="section-description">"Apa saja yang dapat anda lakukan untuk menjadi guru profesional?"</p>
+            </div>
+          </div>
+
+          <p class="reveal" style="font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px;">
+            Untuk mewujudkan profil guru profesional yang memenuhi standar nasional pendidikan—khususnya sebagai guru pengampu mata pelajaran Informatika di era digital—berikut adalah komitmen konkret yang telah, sedang, dan akan terus saya laksanakan pada empat ranah kompetensi:
+          </p>
+
+          <!-- GRID 4 KOMPETENSI GURU -->
+          <div class="competency-grid">
+            <!-- 01 PEDAGOGIK -->
+            <div class="competency-card reveal">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="competency-header-text">
+                  <h3>01. Aspek Pedagogik</h3>
+                  <span>Desain Pembelajaran & Asesmen Terarah</span>
+                </div>
+              </div>
+              <div class="competency-body">
+                <p>Menciptakan ekosistem pembelajaran yang adaptif terhadap kebutuhan, kesiapan, dan perkembangan peserta didik melalui perancangan yang sistematis:</p>
+                <ul class="competency-list">
+                  <li><strong>Asesmen Diagnostik Menyeluruh:</strong> Memetakan kesiapan kognitif serta kondisi psikologis dan gaya belajar murid di awal sesi pembelajaran.</li>
+                  <li><strong>Keselarasan Konstruktif (Constructive Alignment):</strong> Menurunkan Capaian Pembelajaran (CP) menjadi Tujuan Pembelajaran (TP) spesifik menggunakan metode ABCD yang terukur.</li>
+                  <li><strong>Penerapan Sintaks Model Aktif:</strong> Mengimplementasikan model Problem-Based Learning (PBL) dan Project-Based Learning (PjBL) secara runtut dari fase orientasi masalah hingga penguatan materi.</li>
+                  <li><strong>Asesmen Multidimensi:</strong> Menyusun instrumen evaluasi (formatif, autentik observasi, dan sumatif) yang selaras dengan level kognitif tujuan pembelajaran.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 02 KEPRIBADIAN -->
+            <div class="competency-card reveal">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="competency-header-text">
+                  <h3>02. Aspek Kepribadian</h3>
+                  <span>Regulasi Emosi & Budaya Refleksi Rutin</span>
+                </div>
+              </div>
+              <div class="competency-body">
+                <p>Menjaga integritas diri dan kematangan emosional sebagai teladan (role model) bagi murid di dalam maupun di luar kelas:</p>
+                <ul class="competency-list">
+                  <li><strong>Pengendalian Emosi (Self-Management):</strong> Mampu menahan respons reaktif saat menghadapi situasi kelas yang kurang kondusif atau siswa lelah di jam kritis siang hari.</li>
+                  <li><strong>Penerapan Teknik STOP:</strong> Mengambil jeda sadar (<em>Stop, Take a breath, Observe, Proceed</em>) sebelum merespons dinamika kelas agar teguran tetap asertif dan mendidik.</li>
+                  <li><strong>Budaya Praktik Reflektif:</strong> Menjalankan evaluasi diri secara rutin di setiap akhir proses pembelajaran untuk mengidentifikasi kelemahan rancangan ajar.</li>
+                  <li><strong>Pola Pikir Bertumbuh (Growth Mindset):</strong> Memandang tantangan dan kegagalan dalam mengajar sebagai ruang belajar untuk perbaikan diri berkelanjutan.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 03 PROFESIONAL -->
+            <div class="competency-card reveal">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="competency-header-text">
+                  <h3>03. Aspek Profesional</h3>
+                  <span>Inovasi Teknologi & Pengembangan Berkelanjutan</span>
+                </div>
+              </div>
+              <div class="competency-body">
+                <p>Mengoptimalkan keahlian bidang informatika dan berkomitmen pada peningkatan kapasitas diri sepanjang hayat (lifelong learning):</p>
+                <ul class="competency-list">
+                  <li><strong>Pengembangan Media Interaktif:</strong> Memanfaatkan kemahiran pemrograman untuk membangun media ajar digital (web kustom, gamifikasi Phaser.js, modul simulasi).</li>
+                  <li><strong>Pengembangan Keprofesian (PKB):</strong> Aktif mengikuti seminar, lokakarya, pelatihan teknologi pendidikan, serta sertifikasi keahlian teknologi baru di luar jam wajib mengajar.</li>
+                  <li><strong>Publikasi Ilmiah & Best Practice:</strong> Membiasakan diri mendokumentasikan karya inovasi pembelajaran ke dalam tulisan akademis terstruktur sesuai standar APIK (Asli, Perlu, Ilmiah, Konsisten).</li>
+                  <li><strong>Etika Akademik:</strong> Menjunjung tinggi integritas intelektual, kaidah bibliografi, dan bebas dari praktik plagiarisme.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 04 SOSIAL -->
+            <div class="competency-card reveal">
+              <div class="competency-header">
+                <div class="competency-icon">
+                  <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <div class="competency-header-text">
+                  <h3>04. Aspek Sosial</h3>
+                  <span>Komunikasi Kolaboratif & Hubungan Masyarakat</span>
+                </div>
+              </div>
+              <div class="competency-body">
+                <p>Membangun jejaring kolaborasi harmonis dengan segenap pemangku kepentingan di lingkungan satuan pendidikan dan masyarakat:</p>
+                <ul class="competency-list">
+                  <li><strong>Kolaborasi Rekan Sejawat:</strong> Menjalin kerja sama yang santun, terbuka, dan produktif dengan sesama guru serta tenaga kependidikan di sekolah.</li>
+                  <li><strong>Kemitraan Orang Tua/Wali:</strong> Menjalin komunikasi yang proaktif dan transparan mengenai perkembangan belajar, kendala, serta capaian peserta didik.</li>
+                  <li><strong>Kepekaan Lingkungan Sekolah:</strong> Tanggap terhadap kebutuhan sekolah (seperti projek digitalisasi sistem sarpras SPACE-IN di SMAN 4 Yogyakarta).</li>
+                  <li><strong>Keterlibatan Sosial Kemasyarakatan:</strong> Menghormati kearifan lokal, norma sosial, dan berpartisipasi aktif dalam kegiatan kemasyarakatan di sekitar lingkungan sekolah.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3: RENCANA TINDAK LANJUT ==================== -->
+      <section class="content-section" id="rencana-tindak-lanjut" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">INDIKATOR 2 // RENCANA AKSI AWAL KARIER</div>
+              <h2 class="section-title">TIGA LANGKAH AWAL<br />MEMULAI <span class="yellow">KARIER GURU.</span></h2>
+            </div>
+            <div style="max-width: 520px;">
+              <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 8px;">Pertanyaan Rencana Tindak Lanjut LK 3:</p>
+              <p class="section-description">"Apa saja tiga hal penting yang akan anda lakukan ketika memulai karir sebagai guru?"</p>
+            </div>
+          </div>
+
+          <div class="roadmap-grid">
+            <!-- LANGKAH 1 -->
+            <div class="roadmap-step-card reveal">
+              <div class="roadmap-badge">
+                <i class="fa-solid fa-1"></i> LANGKAH STRATEGIS 01
+              </div>
+              <h3 class="roadmap-title">Menguasai Empat Kompetensi Utama & Kesiapan Perangkat Ajar</h3>
+              <p class="roadmap-desc">
+                Menyiapkan kesiapan diri secara menyeluruh pada empat kompetensi dasar guru (pedagogik, kepribadian, sosial, dan profesional). Melakukan telaah kurikulum mendalam, menyiapkan bahan ajar bermutu, merancang media pembelajaran digital interaktif, dan menentukan metode instruksional yang paling efektif sebelum melangkah masuk ke dalam ruang kelas.
+              </p>
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-light);">
+                <span style="font-size: 11px; font-weight: 700; color: var(--yellow); letter-spacing: 1px; text-transform: uppercase;">Aksi Nyata:</span>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Penyusunan modul ajar berbasis TP ABCD, media kuis interaktif, dan simulasi laboratorium.</p>
+              </div>
+            </div>
+
+            <!-- LANGKAH 2 -->
+            <div class="roadmap-step-card reveal">
+              <div class="roadmap-badge">
+                <i class="fa-solid fa-2"></i> LANGKAH STRATEGIS 02
+              </div>
+              <h3 class="roadmap-title">Mengenali Karakteristik Murid Secara Autentik</h3>
+              <p class="roadmap-desc">
+                Melakukan observasi diagnostik, pendekatan personal yang bersahabat, serta berdiskusi dan berkonsultasi dengan guru senior/wali kelas sebelumnya. Langkah ini krusial untuk memetakan latar belakang sosio-emosional, potensi unik, tingkat kemampuan awal, serta keragaman modalitas dan gaya belajar setiap murid di kelas.
+              </p>
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-light);">
+                <span style="font-size: 11px; font-weight: 700; color: var(--yellow); letter-spacing: 1px; text-transform: uppercase;">Aksi Nyata:</span>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Pemberian kuesioner non-kognitif, wawancara santai, dan penyusunan profil belajar murid.</p>
+              </div>
+            </div>
+
+            <!-- LANGKAH 3 -->
+            <div class="roadmap-step-card reveal">
+              <div class="roadmap-badge">
+                <i class="fa-solid fa-3"></i> LANGKAH STRATEGIS 03
+              </div>
+              <h3 class="roadmap-title">Membangun Komunikasi Efektif & Budaya Positif Kelas</h3>
+              <p class="roadmap-desc">
+                Menetapkan kesepakatan belajar bersama (<em>class agreement</em>), aturan kelas yang disepakati dua arah, serta rutinitas pembelajaran yang transparan sejak hari-hari pertama pertemuan. Menjalin pola komunikasi verbal dan non-verbal yang hangat, apresiatif, serta menumbuhkan rasa saling menghormati antara guru dan peserta didik.
+              </p>
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-light);">
+                <span style="font-size: 11px; font-weight: 700; color: var(--yellow); letter-spacing: 1px; text-transform: uppercase;">Aksi Nyata:</span>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Penyusunan kontrak belajar kolaboratif, sinyal tanda diam, dan pembiasaan apresiasi positif.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: SINTESIS PERJALANAN PPG ==================== -->
+      <section class="content-section" id="sintesis-perjalanan" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">KULMINASI E-PORTOFOLIO // BENANG MERAH PEMIKIRAN</div>
+              <h2 class="section-title">INTEGRASI SIKLUS<br />REFLEKSI <span class="yellow">PERKULIAHAN PPG</span></h2>
+            </div>
+            <p class="section-description">Keterpaduan utuh antara pemikiran filosofis, penguasaan modul perkuliahan dua semester, hingga perwujudan karya inovasi nyata.</p>
+          </div>
+
+          <div class="timeline-wrap reveal">
+            <!-- TAHAP 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-box">
+                <span class="timeline-time-badge">TOPIK 1 // LEMBAR KERJA 1</span>
+                <h4 class="timeline-title">Visi Pribadi Guru: Menjadi Pamong yang Menuntun</h4>
+                <p class="timeline-desc">
+                  Membangun pondasi filosofi pendidikan berlandaskan pemikiran Ki Hadjar Dewantara. Menyadari bahwa peran guru bukan mencetak atau mendominasi, melainkan menuntun segala kodrat alam dan kodrat zaman peserta didik agar mencapai keselamatan dan kebahagiaan setinggi-tingginya.
+                </p>
+              </div>
+            </div>
+
+            <!-- TAHAP 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-box">
+                <span class="timeline-time-badge">TOPIK 2 // LEMBAR KERJA 2 (SEMESTER 1)</span>
+                <h4 class="timeline-title">Eksplorasi Landasan Pedagogik & Praktik Terbimbing</h4>
+                <p class="timeline-desc">
+                  Mendalami karakteristik peserta didik (PPDP), model pembelajaran mendalam & asesmen dasar (PMA Dasar), serta menguji coba perencanaan di ruang kelas nyata melalui PPL Terbimbing di mana kesenjangan antara teori dan praktik (kecenderungan ceramah) mulai dievaluasi secara kritis.
+                </p>
+              </div>
+            </div>
+
+            <!-- TAHAP 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-box">
+                <span class="timeline-time-badge">TOPIK 2 // LEMBAR KERJA 2 (SEMESTER 2)</span>
+                <h4 class="timeline-title">Kematangan Sosial Emosional, Kolaborasi, & PPL Mandiri</h4>
+                <p class="timeline-desc">
+                  Mengembangkan kecerdasan emosional melalui kerangka CASEL dan Teknik STOP saat mengajar di jam-jam kritis siang hari, memimpin projek digitalisasi sarpras sekolah (SPACE-IN), memahami regulasi keprofesian berkelanjutan (prinsip APIK), serta mengajar penuh secara mandiri di SMAN 4 Yogyakarta.
+                </p>
+              </div>
+            </div>
+
+            <!-- TAHAP 4 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-box">
+                <span class="timeline-time-badge">TOPIK 3 // LEMBAR KERJA 3 (KULMINASI REFLEKTIF)</span>
+                <h4 class="timeline-title">Refleksi Menyeluruh & Komitmen Guru Profesional</h4>
+                <p class="timeline-desc">
+                  Mensintesiskan seluruh pengalaman perkuliahan ke dalam paradigma ekosistem pendidikan ideal Indonesia yang berpusat pada murid, penguasaan utuh empat kompetensi guru, serta formulasi 3 langkah awal strategis saat mengawali karier pendidik profesional.
+                </p>
+              </div>
+            </div>
+
+            <!-- TAHAP 5 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-box">
+                <span class="timeline-time-badge">TOPIK 4 // LEMBAR KERJA 4</span>
+                <h4 class="timeline-title">Desain Karya Inovatif: Game-Based Assessment (Phaser.js)</h4>
+                <p class="timeline-desc">
+                  Mengimplementasikan buah refleksi bermakna menjadi karya inovasi evaluasi interaktif berbasis web gim. Mengubah distraksi bermain komputer pada jam pelajaran terakhir menjadi instrumen post-test yang imersif, terukur, dan bermakna bagi peserta didik jenjang SMA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 5: PRATINJAU DOKUMEN ASLI LK 3 ==================== -->
+      <section class="content-section" id="dokumen-asli" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">DOKUMEN ASLI // PORTAL ARTEFAK</div>
+              <h2 class="section-title">PRATINJAU<br />DOKUMEN <span class="yellow">REFLEKSI PPG</span></h2>
+            </div>
+            <p class="section-description">Dokumen resmi Lembar Kerja 3 (LK 3) Refleksi Pengalaman Belajar Selama Mengikuti Program PPG oleh Ilyas Fandhi Anggara.</p>
+          </div>
+
+          <div class="document-preview-section reveal" style="margin: 30px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <h4 style="font-family: 'Orbitron', sans-serif; font-size: 18px; color: var(--text-primary); margin-bottom: 4px;">
+                  Refleksi_PPG.pdf
+                </h4>
+                <p style="font-size: 13px; color: var(--text-muted);">Format Dokumen Resmi Seminar Pendidikan Profesi Guru UNY 2026 (Lembar Kerja 3)</p>
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" class="btn btn-outline" onclick="openDocument('dokumen/Refleksi_PPG.pdf', 'Dokumen Refleksi PPG (LK 3) - Ilyas Fandhi Anggara')">
+                  <i class="fa-solid fa-expand"></i> Mode Layar Penuh
+                </button>
+                <a href="dokumen/Refleksi_PPG.pdf" target="_blank" class="btn btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Dokumen di Tab Baru ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="iframe-container" style="width: 100%; height: 720px; border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; background: #1a1a1a;">
+              <iframe src="dokumen/Refleksi_PPG.pdf" width="100%" height="100%" style="border: none;" title="Refleksi Pengalaman Belajar Selama Mengikuti PPG"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 6: FORMAT TABEL LENGKAP LK 3 ==================== -->
+      <section class="content-section" id="format-tabel-lk3" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+          <div class="section-top reveal">
+            <div>
+              <div class="section-kicker">FORMAT RESMI LK 3 // RUBRIK DOSEN</div>
+              <h2 class="section-title">TABEL STRUKTUR<br /><span class="yellow">LEMBAR KERJA 3</span></h2>
+            </div>
+            <p class="section-description">Tabel komparatif terstruktur yang menyajikan indikator, pertanyaan panduan, dan uraian jawaban autentik persis sebagaimana format dokumen LK 3.</p>
+          </div>
+
+          <div class="lk4-accordion reveal">
+            <button type="button" class="accordion-trigger active" id="tableAccordionTrigger">
+              <span class="accordion-trigger-inner">
+                <i class="fa-solid fa-table-list" style="color: var(--yellow);"></i>
+                <span>Tabel Lengkap Lembar Kerja 3 (LK 3) - Refleksi Pengalaman Belajar Selama Mengikuti PPG</span>
+              </span>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </button>
+
+            <div class="accordion-body open" id="tableAccordionBody">
+              <div class="lk4-table-wrap">
+                <table class="lk4-table">
+                  <thead>
+                    <tr>
+                      <th class="lk4-col-num">No</th>
+                      <th class="lk4-col-indicator">Indikator</th>
+                      <th class="lk4-col-question">Pertanyaan</th>
+                      <th class="lk4-col-answer">Uraian Jawaban</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="lk4-col-num">01</td>
+                      <td class="lk4-col-indicator">
+                        <strong>Refleksi pengalaman belajar selama mengikuti Program PPG</strong>
+                      </td>
+                      <td class="lk4-col-question">
+                        1. Setelah mengikuti rangkaian refleksi pengalaman belajar, menurut anda, bagaimana seharusnya pendidikan di Indonesia?
+                      </td>
+                      <td class="lk4-col-answer">
+                        <p>Setelah mengikuti seluruh rangkaian perkuliahan dan refleksi pengalaman belajar selama PPG, saya menyadari bahwa pendidikan di Indonesia <strong>seharusnya tidak lagi berfokus pada transfer materi satu arah atau sekadar mengejar ketuntasan nilai akademik di atas kertas</strong>.</p>
+                        <p>Pendidikan di Indonesia harus bertransformasi menjadi <strong>ekosistem belajar yang berpusat pada peserta didik (student-centered), memerdekakan, dan menerapkan prinsip pembelajaran mendalam (Berkesadaran, Bermakna, dan Menggembirakan)</strong>.</p>
+                        <p>Pendidikan yang ideal harus bisa memperhatikan kondisi psikologis dan emosional seluruh warga sekolah, yaitu murid maupun guru. Sekolah harus mampu menciptakan ruang belajar yang aman dan nyaman, di mana guru mampu mengelola emosinya dengan baik serta menumbuhkan kesadaran diri, rasa empati, dan keterampilan relasi yang positif dalam pembelajaran.</p>
+                        <p>Kemudian, karena murid datang ke kelas dengan kesiapan belajar, minat, profil belajar, dan latar belakang sosial-budaya yang berbeda, pendidikan di Indonesia harus bisa mengakomodasi keberagaman tersebut dalam pembelajaran tanpa membeda-bedakan.</p>
+                        <p>Setelah itu, yang terakhir adalah pelaksanaan asesmen yang sesuai dengan kemampuan dan karakteristik murid, serta selaras dengan tujuan pembelajaran. Asesmen tidak seharusnya hanya terpaku pada satu bentuk tes tertulis di akhir pembelajaran, melainkan harus diawali dengan asesmen diagnostik (kognitif dan non-kognitif) yang akurat menggunakan prinsip Desain Universal untuk Pembelajaran (DUP) agar murid dapat mengekspresikan kemampuannya melalui berbagai cara.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="lk4-col-num">02</td>
+                      <td class="lk4-col-indicator">
+                        <strong>Refleksi pengalaman belajar selama mengikuti Program PPG</strong>
+                      </td>
+                      <td class="lk4-col-question">
+                        2. Apa saja yang dapat anda lakukan untuk menjadi guru profesional?
+                      </td>
+                      <td class="lk4-col-answer">
+                        <p>Untuk mewujudkan profil guru profesional yang memenuhi kompetensi pedagogik, kepribadian, sosial, dan profesional—khususnya sebagai guru Informatika—hal-hal konkret yang dapat dan akan terus saya lakukan meliputi:</p>
+                        <ol>
+                          <li>
+                            <strong>Aspek Pedagogik:</strong> Untuk mewujudkan aspek ini, selama pembelajaran saya akan berusaha untuk menciptakan pembelajaran yang sesuai dengan kebutuhan dan kemampuan murid. Memetakan kesiapan belajar murid di awal pembelajaran yang mencakup aspek kognitif dan non-kognitif melalui asesmen diagnostik. Kemudian dalam pembelajaran saya juga harus bisa merancang pembelajaran yang selaras, membuat tujuan pembelajaran yang selaras dengan Capaian Pembelajaran, menggunakan model pembelajaran yang sesuai, metode pembelajaran yang beragam, dan rancangan asesmen yang sesuai dengan tujuan pembelajaran.
+                          </li>
+                          <li>
+                            <strong>Aspek Kepribadian:</strong> Untuk aspek ini menjaga sifat diri sendiri menjadi bagian penting bagi saya, terutama dalam mengelola emosi selama pembelajaran atau di luar pembelajaran. Kemudian, melakukan refleksi juga sangat penting bagi saya karena dengan adanya refleksi rutin di setiap akhir pembelajaran, kita bisa mengetahui mana hal yang masih kurang dari diri kita—baik saat proses pembelajaran di kelas maupun di luar pembelajaran—sehingga dapat terus melakukan perbaikan secara berkelanjutan.
+                          </li>
+                          <li>
+                            <strong>Aspek Profesional:</strong> Karena saya merupakan guru Informatika maka saya harus bisa memanfaatkan kemampuan saya dalam merancang media pembelajaran yang mudah untuk murid gunakan di zaman sekarang. Kemudian profesional tidak hanya mengajar tapi di luar jam mengajar juga harus melakukan hal yang sama seperti melakukan pengembangan diri (mengikuti pelatihan atau mempelajari perkembangan teknologi baru) serta profesional dalam lingkungan sekolah.
+                          </li>
+                          <li>
+                            <strong>Aspek Sosial:</strong> Pada aspek ini, menjaga dan membangun komunikasi serta kolaborasi yang baik di dalam lingkungan sekolah menjadi hal yang sangat penting. Saya akan menjalin kerja sama yang erat dan santun dengan rekan sejawat guru dan semua yang ada di lingkungan sekolah. Lebih dari itu, kompetensi sosial ini tidak hanya saya terapkan di lingkungan sekolah saja, tetapi di lingkungan masyarakat dan bersama orang tua/wali murid juga. Saya akan menjaga komunikasi yang terbuka dengan orang tua terkait perkembangan belajar anak mereka, serta ikut berperan aktif dan menghargai nilai-nilai sosial-budaya di masyarakat sekitar.
+                          </li>
+                        </ol>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="lk4-col-num">03</td>
+                      <td class="lk4-col-indicator">
+                        <strong>Rencana Tindak Lanjut</strong>
+                      </td>
+                      <td class="lk4-col-question">
+                        Apa saja tiga hal penting yang akan anda lakukan ketika memulai karir sebagai guru?
+                      </td>
+                      <td class="lk4-col-answer">
+                        <p>Tiga hal yang menurut saya penting ketika memulai karir nantinya jika menjadi guru adalah memperkuat kompetensi dasar dalam mengajar, mengenali karakteristik dan kebutuhan murid, serta membangun komunikasi yang efektif:</p>
+                        <ol>
+                          <li>
+                            <strong>Menguasai Empat Kompetensi Utama:</strong> Pada hal ini saya perlu untuk menyiapkan diri dengan empat kompetensi dasar guru, yaitu pedagogik, kepribadian, profesional, dan sosial, serta mendalami materi, media, serta metode pembelajaran sebelum masuk kelas.
+                          </li>
+                          <li>
+                            <strong>Mengenali Karakteristik Murid:</strong> Melakukan observasi, pendekatan, dan bertanya kepada guru senior untuk memahami latar belakang, keunikan, serta gaya belajar setiap murid.
+                          </li>
+                          <li>
+                            <strong>Membangun Komunikasi yang Baik:</strong> Menetapkan ekspektasi, aturan, serta rutinitas yang jelas sejak hari-hari pertama, serta menjalin komunikasi verbal maupun non-verbal yang baik dengan siswa.
+                          </li>
+                        </ol>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE NAVIGATION (PREV / NEXT) ==================== -->
+      <section class="content-section" style="padding: 40px 0 80px;">
+        <div class="container reveal">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <a href="refleksi-sem2.html" class="nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+              <i class="fa-solid fa-arrow-left"></i> Sebelumnya: Refleksi Semester 2
+            </a>
+            <a href="karya.html" class="nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+              Selanjutnya: Desain Karya Inovatif <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== PDF MODAL ==================== -->
+    <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdfTitle">
+      <div class="pdf-modal-backdrop" onclick="closeDocument()"></div>
+      <div class="pdf-viewer">
+        <div class="pdf-header">
+          <div class="pdf-header-meta">
+            <div class="pdf-label">Dokumen Resmi / Lembar Kerja 3</div>
+            <h3 class="pdf-title" id="pdfTitle">Pratinjau Dokumen LK 3</h3>
+          </div>
+          <div class="pdf-actions">
+            <a href="#" target="_blank" rel="noopener noreferrer" id="pdfExternal" class="pdf-open">Buka di Tab Baru ↗</a>
+            <button type="button" class="pdf-close" id="pdfClose" aria-label="Tutup dokumen">×</button>
+          </div>
+        </div>
+        <div class="pdf-container">
+          <iframe id="pdfFrame" src="" title="Penampil Dokumen PDF" loading="lazy"></iframe>
+          <div class="pdf-fallback" id="pdfFallback">
+            <div class="pdf-fallback-inner">
+              <strong>PDF</strong>
+              <p>Browser tidak menampilkan PDF secara langsung pada mode ini. Gunakan tombol <b>Buka di Tab Baru</b> di bagian atas untuk melihat dokumen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="container reveal">
+        <div class="footer-title">TERUS BELAJAR<br />& BERTUMBUH</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fandhidk17/" target="_blank">INSTAGRAM</a>
+          <a href="mailto:ilyasfandhianggara@gmail.com">EMAIL</a>
+          <a href="https://e-portofolio-fandhi.vercel.app/" target="_blank">E-PORTOFOLIO PPL</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 12px; color: var(--text-muted)">
+          © 2026 ILYAS FANDHI ANGGARA • PPG CALON GURU UNIVERSITAS NEGERI YOGYAKARTA
+        </p>
+      </div>
+    </footer>
+
+    <!-- MASTER APP SCRIPT -->
+    <script src="js/app.js"></script>
+
+    <!-- PAGE SPECIFIC SCRIPT: MODAL & ACCORDION -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // PDF Modal Setup
+        const pdfModal = document.getElementById("pdfModal");
+        const pdfFrame = document.getElementById("pdfFrame");
+        const pdfTitle = document.getElementById("pdfTitle");
+        const pdfExternal = document.getElementById("pdfExternal");
+        const pdfClose = document.getElementById("pdfClose");
+        const pdfFallback = document.getElementById("pdfFallback");
+        let lastFocusedElement = null;
+
+        window.openDocument = function (file, title) {
+          lastFocusedElement = document.activeElement;
+          pdfTitle.textContent = title || "Pratinjau Dokumen LK 3";
+          pdfExternal.href = file;
+          pdfFallback.classList.remove("show");
+          pdfFrame.style.display = "block";
+          pdfFrame.src = file;
+          pdfModal.classList.add("active");
+          pdfModal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          setTimeout(() => pdfClose.focus(), 30);
+        };
+
+        window.closeDocument = function () {
+          pdfModal.classList.remove("active");
+          pdfModal.setAttribute("aria-hidden", "true");
+          pdfFrame.src = "";
+          document.body.style.overflow = "";
+          if (lastFocusedElement) lastFocusedElement.focus();
+        };
+
+        if (pdfClose) pdfClose.addEventListener("click", closeDocument);
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && pdfModal && pdfModal.classList.contains("active")) closeDocument();
+        });
+        if (pdfFrame) {
+          pdfFrame.addEventListener("error", () => {
+            pdfFrame.style.display = "none";
+            pdfFallback.classList.add("show");
+          });
+        }
+
+        // Accordion Toggle for Table
+        const trigger = document.getElementById("tableAccordionTrigger");
+        const body = document.getElementById("tableAccordionBody");
+        if (trigger && body) {
+          trigger.addEventListener("click", function () {
+            const isOpen = body.classList.contains("open");
+            if (isOpen) {
+              body.classList.remove("open");
+              trigger.classList.remove("active");
+            } else {
+              body.classList.add("open");
+              trigger.classList.add("active");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
